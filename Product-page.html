@@ -35,7 +35,7 @@
 
         .main-content {
             margin-left: 160px;
-            padding: 4rem 2rem;
+            padding: 4rem 1rem;
             position: relative;
             overflow: visible;
         }
@@ -400,10 +400,16 @@
         }
 
         .tc-features__description {
-            font-size: 1.1rem;
-            color: #4a5568;
-            line-height: 1.6;
-            position: relative;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-bottom: 2.5rem;
+            color: #45395B;
+            text-align: left;
+            max-width: 648px;
+            margin: auto;
+            text-align: center;
+            font-family: inherit;
         }
 
         /* Preview Section Styles */
@@ -411,6 +417,7 @@
             margin-bottom: 4rem;
             /* Enables positioning for child elements */
             display: flex;
+            margin-top: 127px;
         }
 
         .tc-preview__desktop-img {
@@ -421,7 +428,7 @@
             position: relative;
             /* Ensures the image stays above the gradient */
             margin-right: 300px;
-            margin-left: ;
+            margin-left: 30px;
         }
 
         .tc-preview__content {
@@ -430,10 +437,10 @@
             max-width: 1096px;
             background: linear-gradient(122.28deg, #6381FB 7.98%, #9172FA 92.02%);
             border-radius: 40px;
-            padding: 10% 70px 0 20%;
+            padding: 10% 70px 0 23%;
             text-align: start;
             position: absolute;
-            top: 16%;
+            top: 20%;
             right: 0;
             /* transform: translateY(-50%); */
             z-index: 1;
@@ -523,19 +530,18 @@
         }
 
         .tc-preview__title {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #f8f9fa;
-            ;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 36px;
+            color: #fff;
+            margin-bottom: 16px;
         }
 
         .tc-preview__text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #f8f9fa;
-            /* Light color for readability */
-            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #fff;
         }
 
 
@@ -607,6 +613,10 @@
             position: absolute;
         }
 
+        .mt-4 {
+            margin-top: 5.0rem !important;
+        }
+
         .mt-100 {
             margin-top: 100px;
         }
@@ -638,6 +648,145 @@
 
             .tc-preview__mobile-title {
                 font-size: 1.5rem;
+            }
+        }
+
+
+        .conferences-icon-wrapper {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .conferences-icon {
+            display: inline-block;
+            height: 48px;
+            width: 48px;
+        }
+
+        .conferences-title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            color: #45395B;
+            margin-bottom: 1rem;
+            max-width: 648px;
+            margin: 0 auto 16px;
+            text-align: center;
+        }
+
+        .conferences-description {
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-bottom: 2.5rem;
+            color: #45395B;
+            text-align: left;
+            max-width: 648px;
+            margin: auto;
+            text-align: center;
+            font-family: inherit;
+        }
+
+        .conferences-interface-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .conferences-interface-image {
+            max-width: 872px;
+            width: 100%;
+            margin: -40px 0;
+            -webkit-box-shadow: 0px 8px 32px rgba(114, 127, 150, 0.32);
+            border-radius: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .conferences-background-circle {
+            position: absolute;
+            height: 450px;
+            background: linear-gradient(180deg, #65E0FF 0%, #648BFF 100%);
+            border-radius: 1000px;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 1096px;
+            width: 1096px;
+        }
+
+        .conferences-features-grid {
+            padding: 4rem 0 0 0;
+        }
+
+        .conferences-feature-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .conferences-feature-card__icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            box-shadow: 0px 9px 10px 2px rgba(114, 127, 150, 0.32);
+        }
+
+        .conferences-feature-card__icon {
+            width: 24px;
+            height: 24px;
+            color: #ffffff;
+        }
+
+        .conferences-feature-card__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            text-align: start;
+        }
+
+        .conferences-feature-card__description {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #666666;
+            margin: 0;
+            text-align: start;
+        }
+
+        @media (max-width: 768px) {
+            .conferences-interface-preview {
+                margin-bottom: 3rem;
+            }
+
+            .conferences-interface-preview__blob {
+                width: 200px;
+                height: 200px;
+            }
+
+            .conferences-feature-card {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .conferences-title {
+                font-size: 2.5rem;
+            }
+
+            .conferences-description {
+                font-size: 1rem;
+                padding: 0 1rem;
             }
         }
     </style>
@@ -756,7 +905,6 @@
                     <div class="feature-name">Collaboration</div>
                 </div>
             </div>
-
         </div>
 
         <main class="main-content text-center">
@@ -842,8 +990,7 @@
                     <!-- Header Section -->
                     <div class="tc-features__header text-center">
                         <div class="tc-features__icon-wrapper">
-                            <img src="/placeholder.svg?height=50&width=50" alt="TeamChat Icon"
-                                class="tc-features__icon">
+                            <img src="assets/images/teamchat.svg" alt="TeamChat Icon" class="tc-features__icon">
                         </div>
                         <h2 class="tc-features__title">TeamChat, beyond email communication</h2>
                         <p class="tc-features__description">
@@ -949,6 +1096,95 @@
                                         external users as well.
                                     </p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="">
+                <div class="conferences-icon-wrapper">
+                    <img class="conferences-icon" src="assets/images/webmail.svg" alt="">
+                </div>
+
+                <h1 class="conferences-title">Conferences are the new way of collaborating</h1>
+
+                <p class="conferences-description">
+                    Virtual conferences allow teams to collaborate more effectively, communicate better, and hold
+                    meetings
+                    from
+                    anywhere. With powerful tools for file sharing, screen sharing, and real-time collaboration, your
+                    team
+                    can stay in
+                    sync, no matter the distance. Our platform integrates AI features to enhance productivity and
+                    communication.
+                </p>
+
+                <div class="conferences-interface-container">
+                    <div class="conferences-background-circle"></div>
+                    <img src="assets/images/epos-desktop.webp" alt="Conferences Interface"
+                        class="conferences-interface-image">
+                </div>
+
+                <div class="conferences-features-grid container">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="conferences-feature-card">
+                                <div
+                                    class="conferences-feature-card__icon-wrapper conferences-feature-card__icon-wrapper--purple">
+                                    <img src="assets/images/ai-icon.svg" alt="">
+                                </div>
+                                <h3 class="conferences-feature-card__title">AI assistant</h3>
+                                <p class="conferences-feature-card__description">During conferences, the AI assistant
+                                    helps
+                                    by
+                                    suggesting responses and summarizing key points from discussions. It can also
+                                    translate
+                                    live
+                                    conversations for a more seamless international collaboration.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="conferences-feature-card">
+                                <div
+                                    class="conferences-feature-card__icon-wrapper conferences-feature-card__icon-wrapper--yellow">
+                                    <img src="assets/images/smart_multitasking.svg" alt="">
+                                </div>
+                                <h3 class="conferences-feature-card__title">Multitasking</h3>
+                                <p class="conferences-feature-card__description">Switch between presenting, chatting,
+                                    and
+                                    collaborating
+                                    on documents—all while staying in the same virtual conference.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="conferences-feature-card">
+                                <div
+                                    class="conferences-feature-card__icon-wrapper conferences-feature-card__icon-wrapper--orange">
+                                    <img src="assets/images/smart_planning.svg" alt="">
+                                </div>
+                                <h3 class="conferences-feature-card__title">Smart scheduling</h3>
+                                <p class="conferences-feature-card__description">Plan your conference meetings
+                                    effectively
+                                    by seeing
+                                    everyone’s availability and proposing meeting times with just a few clicks.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="conferences-feature-card">
+                                <div
+                                    class="conferences-feature-card__icon-wrapper conferences-feature-card__icon-wrapper--blue">
+                                    <img src="assets/images/smart_attachments.svg" alt="">
+                                </div>
+                                <h3 class="conferences-feature-card__title">Smart document sharing</h3>
+                                <p class="conferences-feature-card__description">Share large files effortlessly during
+                                    your
+                                    virtual
+                                    meetings with our cloud-based system that ensures seamless delivery without email
+                                    attachment
+                                    limitations.</p>
                             </div>
                         </div>
                     </div>
