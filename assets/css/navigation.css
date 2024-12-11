@@ -1,0 +1,223 @@
+:root {
+    --primary-purple: #7E5FF1;
+    --hover-purple: #4E2782;
+    ;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    max-width: 1140px;
+}
+
+.navigation {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.carousel-top {
+    margin-top: 50px;
+}
+
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: right;
+    color: #333333;
+    font-size: 12px;
+    line-height: 16px;
+    padding-right: 5px;
+    padding-bottom: 1.2rem;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    transform: scale(1);
+    /* Default scale */
+    font-weight: normal;
+    /* Default weight */
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(black);
+    transform: scale(1.1);
+    /* Zoom-in effect */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+.nav-item:active {
+    transform: scale(0.95);
+    /* Zoom-out effect on click */
+    font-weight: bold;
+    /* Keep bold on click */
+}
+
+/* Apply hover effect to the selected (active) item */
+.nav-item.active,
+.nav-item.active:hover {
+    background: rgba(255, 255, 255, 0.1);
+    /* Keep background on active item */
+    color: var(--primary-purple);
+    /* Keep text color on active item */
+    transform: scale(1.1);
+    /* Keep zoom-in effect for active item */
+    font-weight: bold;
+    /* Keep text bold for active item */
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    /* Ensures slides stay within bounds */
+
+}
+
+.carousel-slide {
+    position: absolute;
+    height: 100%;
+    flex: 1 1 calc(100% / 7);
+    /* Divides the container into 7 equal parts */
+    opacity: 0.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+    margin-top: -50px;
+    transform: scale(1).1;
+}
+
+.nav-item.active {
+    color: var(--primary-purple);
+    font-weight: bold;
+}
+
+
+/* Tooltip styling for the Next button */
+.next-button[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: 100%;
+    /* Position the tooltip below the Next button */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    /* Adds space between button and tooltip */
+    white-space: nowrap;
+    z-index: 10;
+    /* Ensure the tooltip appears above other elements */
+}
+
+/* Tooltip styling for the Previous button */
+.prev-button[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: 100%;
+    /* Position the tooltip below the Previous button */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    /* Adds space between button and tooltip */
+    white-space: nowrap;
+    z-index: 10;
+    /* Ensure the tooltip appears above other elements */
+}
+
+.carousel-slide.next,
+.carousel-slide.prev {
+    opacity: 0.6;
+    z-index: 2;
+    transform: scale(0.95);
+}
+
+/* .carousel-slide.next {
+            margin-top: -30px;
+        }
+
+        .carousel-slide.prev {
+            margin-top: -30px;
+        } */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .nav-item {
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .carousel-container {
+        height: 400px;
+    }
+}
+
+.nav-button {
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--primary-purple);
+    border: none;
+    border-radius: 50px;
+    /* Fully rounded */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: darkviolet;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    /* Center navigation items and buttons */
+}

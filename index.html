@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email. Collaboration. Office.</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="redesigned.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        #redesigned h1,
+        #redesigned h2,
+        #redesigned h3,
+        #redesigned h4,
+        #redesigned h5,
+        #redesigned h6,
+        #redesigned p,
+        #redesigned span,
+        #redesigned a {
+            font-family: inherit
+        }
+
+        .subtitle {
+            font-size: 48px;
+            color: #7166F9;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            height: 60px;
+            /* Set height to show one line of text */
+            overflow: hidden;
+            /* Hide overflowing content */
+        }
+
+        .text-wrapper {
+            position: relative;
+            animation: scrollText 6s linear infinite;
+            /* Scrolling animation */
+        }
+
+        .text-wrapper div {
+            height: 60px;
+            /* Match the container height */
+            line-height: 60px;
+            /* Vertically center text */
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateY(0);
+                /* Start with the first phrase */
+            }
+
+            33% {
+                transform: translateY(0);
+                /* Hold the first phrase */
+            }
+
+            50% {
+                transform: translateY(-60px);
+                /* Move to the second phrase */
+            }
+
+            83% {
+                transform: translateY(-60px);
+                /* Hold the second phrase */
+            }
+
+            100% {
+                transform: translateY(-120px);
+                /* Move to the third phrase */
+            }
+        }
+
+
+
+
+        .description {
+            color: #333;
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .deployment-options {
+            color: #333;
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .deployment-options a {
+            color: #7166F9;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .dc-button.dc-preview-button {
+            text-align: center;
+            line-height: 1.5;
+            color: #fff;
+            background: linear-gradient(-45deg, #FFB347, #FF7283);
+            background-size: 200% 200%;
+            background-position: 0% 50%;
+            min-width: 180px;
+            padding: 16px 32px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(255, 114, 131, 0.25);
+            outline: none;
+        }
+
+        .dc-button.dc-preview-button:hover {
+            background-position: 100% 50%;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(255, 114, 131, 0.3);
+        }
+
+        .dc-button.dc-preview-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(255, 114, 131, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .dc-button.dc-preview-button {
+                font-size: 16px;
+                padding: 14px 28px;
+            }
+        }
+
+
+
+        .trust-section {
+            text-align: center;
+        }
+
+        .hero-box-icon {
+            margin-top: 70px;
+        }
+
+        .trust-title {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-logo {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: #666;
+            font-style: italic;
+        }
+
+        .app-screenshots {
+            position: relative;
+            margin-top: -60px;
+            display: flex;
+        }
+
+        .app-screenshots img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            -webkit-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.2));
+        }
+
+
+        .dc-section-wrapper {
+            display: flex;
+            flex-direction: column;
+            /* Vertically center */
+            align-items: center;
+            /* Horizontally center */
+            width: 35%;
+            height: 45vh;
+            /* Full viewport height */
+            margin: 0 auto;
+            /* Horizontally center the section within its container */
+        }
+
+
+        .child-element {
+            align-self: center;
+            /* Center this element horizontally within the parent */
+        }
+
+
+
+        .dc-section-wrapper .dc-title {
+            z-index: 9
+        }
+
+        .dc-section-wrapper .dc-title.dc-title-wrapper {
+            margin: 0 auto 1.5rem auto;
+            max-width: 46.25rem
+        }
+
+        .dc-section {
+            padding-bottom: 0;
+            padding-top: 88px;
+            margin-top: -13px
+        }
+
+        .dc-section-home-top {
+            padding-bottom: 0;
+            padding-top: 88px;
+            margin-top: -13px
+        }
+
+        .dc-section-wrapper .dc-subtitle {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 9;
+            margin-bottom: 2.5rem
+        }
+
+        .dc-section-wrapper .dc-subtitle-wrapper {
+            max-width: 37rem
+        }
+
+        .dc-section-wrapper .dc-subtitle a {
+            color: #7E5FF1;
+            font-weight: 600;
+            text-decoration-thickness: 1px
+        }
+
+        .dc-section-wrapper .dc-subtitle .homepage-hero-subtitle-link {
+            cursor: pointer;
+            color: #7E5FF1;
+            text-decoration-thickness: 1px;
+            font-weight: 700
+        }
+
+        .hero-illustration.hero-illustration-left {
+            width: 20%;
+            left: 0;
+            z-index: 8;
+            max-height: 31.25rem;
+            -webkit-transition: ease all .3s;
+            transition: ease all .3s
+        }
+
+        .hero-illustration img {
+            width: 100%;
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+            -webkit-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.2));
+        }
+
+        .hero-illustration {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: absolute;
+            z-index: 9
+        }
+
+        .hero-illustration .hero-animation {
+            -webkit-transform: translateY(50px);
+            -ms-transform: translateY(50px);
+            transform: translateY(50px);
+            -webkit-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in
+        }
+
+        .hero-illustration .hero-animation.transition {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .hero-illustration.hero-illustration-right {
+            right: 0;
+            width: 20%;
+            z-index: 8;
+            max-height: 31.25rem;
+            -webkit-transition: ease all .3s;
+            transition: ease all .3s
+        }
+
+        .hero-illustration img {
+            width: 100%;
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+            -webkit-filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.2));
+        }
+
+        .navbar-width {
+            max-width: 1400px;
+        }
+
+        @media(min-width: 1920px) {
+            .dc-section-wrapper {
+                width: 40%;
+            }
+        }
+
+        /* Add these styles to your styles.css file */
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            margin-top: 0;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        /* Show dropdown when parent is hovered or has .show class */
+        .dropdown:hover .dropdown-menu,
+        .dropdown.show .dropdown-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0;
+        }
+
+        /* Product dropdown specific styling */
+        .dropdown-menu.product {
+            min-width: 600px;
+            padding: 2rem;
+        }
+
+        .dropdown-section {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .dropdown-left {
+            flex: 1;
+        }
+
+        .dropdown-right {
+            width: 200px;
+            border-left: 1px solid #eaeaea;
+            padding-left: 2rem;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .dropdown-item img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .dropdown-item h4 {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2D3748;
+        }
+
+        .dropdown-item p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #718096;
+        }
+
+        .dropdown-right ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-right ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .dropdown-right ul a {
+            color: #718096;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-right ul a:hover {
+            color: var(--primary-purple);
+        }
+
+        /* Navbar dropdown arrow animation */
+        .nav-link .main-menu-dropdown-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown.show .nav-link .main-menu-dropdown-icon,
+        .nav-item:hover .main-menu-dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+
+        .navbar-brand img {
+            width: 100px;
+            height: auto !important;
+        }
+
+        /* Extend default container for footer */
+        .footer-container {
+            max-width: 1200px;
+            /* Adjust width if needed */
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer Styles */
+        .footer {
+            padding: 60px 0 20px;
+            background-color: #fff;
+        }
+
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li a:hover {
+            color: #6c5ce7;
+        }
+
+
+
+        .subscribe-form {
+            display: flex;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 11px;
+            text-indent: 0.75rem;
+            width: 20%;
+        }
+
+        .subscribe-btn {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+        }
+
+        .certification-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-left: 94px;
+        }
+
+        .certification-badges img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .container-footer {
+            width: 100%;
+            position: relative;
+            max-width: 1140px;
+        }
+
+        .footer-heading {
+            font-size: 11px;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        .footer-heading-para {
+            font-size: 11px;
+            font-weight: 400;
+            color: #8F9BA3 !important;
+            text-decoration: none;
+            margin-bottom: 7px;
+        }
+
+        .footer-text-decoration {
+            text-decoration: none;
+            color: #8f9ba3 !important;
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        .footer-social-icons {
+            margin-left: 14px;
+            text-decoration: none;
+            padding: 14px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-width">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link main-menu-link submenu-dropdown" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Product
+                                <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
+                                    class="main-menu-dropdown-icon">
+                            </a>
+                            <div class="dropdown-menu main-menu-submenu product">
+                                <div class="dropdown-section">
+                                    <div class="dropdown-left">
+                                        <div class="dropdown-item">
+                                            <img src="assets/images/icon-product.svg" alt="Product Features">
+                                            <div>
+                                                <h4>Product Features</h4>
+                                                <p>IceWarp in the daily agenda</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-right">
+                                        <ul>
+                                            <li><a href="#">
+                                                    <img src="assets/images/icon-comparison.svg" alt="">
+                                                    Comparison</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <div class="nav-buttons d-flex gap-2 align-items-center">
+                        <a href="#" class="btn-login">Login</a>
+                        <button class="btn btn-try-free">Try free for 1 month</button>
+                        <button class="btn btn-contact">Contact us</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="fluid dc-section dc-section-home-top d-flex">
+        <div class="dc-section-wrapper">
+            <h1 class="main-title">Email. Collaboration. Office.</h1>
+            <h2 class="subtitle">
+                <div class="text-wrapper" id="text-wrapper"></div>
+            </h2>
+            <p class="description">
+                Hosted email, TeamChat, ChatGPT integration, Conferences,<br>
+                Documents including real-time collaboration, and much more.
+            </p>
+            <p class="deployment-options">
+                Choose between our <a href="#">cloud</a> and <a href="#">on-premises</a> deployment.
+            </p>
+            <button class="dc-button dc-preview-button" style="width: 100px; height: 55px;">View product</button>
+        </div>
+
+        <div class="hero-illustration hero-illustration-left">
+            <img src="assets/images/scr_left.webp" alt="App Interface Left">
+        </div>
+        <div class="hero-illustration hero-illustration-right">
+            <img src="assets/images/scr_right.webp" alt="App Interface Right">
+        </div>
+    </section>
+
+    <div class="container carousel-top">
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-button prev-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <div class="nav-item" data-pos="0">Email & AI</div>
+            <div class="nav-item" data-pos="1">TeamChat & AI</div>
+            <div class="nav-item" data-pos="2">Documents & AI</div>
+            <div class="nav-item" data-pos="3">Calendar</div>
+            <div class="nav-item" data-pos="4">Conferences</div>
+            <div class="nav-item" data-pos="5">Notes</div>
+            <div class="nav-item" data-pos="6">Dashboard</div>
+            <button class="nav-button next-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel-container">
+            <div class="carousel-slide active" data-pos="0">
+                <img src="assets/images/Mail-min.webp" alt="Email & AI"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+            <div class="carousel-slide" data-pos="1">
+                <img src="assets/images/TeamChat-min.webp" alt="TeamChat & AI"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+            <div class="carousel-slide" data-pos="2">
+                <img src="assets/images/Documents-min.webp" alt="Documents & AI"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+            <div class="carousel-slide" data-pos="3">
+                <img src="assets/images/Calendar-min.webp" alt="Calendar"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+            <div class="carousel-slide" data-pos="4">
+                <img src="assets/images/Confe-min.webp" alt="Conferences"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+            <div class="carousel-slide" data-pos="5">
+                <img src="assets/images/Notes-min_1.webp" alt="Notes"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+            <div class="carousel-slide" data-pos="6">
+                <img src="assets/images/Dash-min.webp" alt="Calendar"
+                    style="height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row justify-content-center">
+                <!-- Product Column -->
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h5 class="footer-heading">Product</h5>
+                    <ul>
+                        <li><a class="footer-heading-para" href="#">Product page</a></li>
+                        <li><a class="footer-heading-para" href="#">Comparison</a></li>
+                    </ul>
+                </div>
+
+                <!-- Pricing Column -->
+                <div class="col-md-5 col-sm-6 mb-4">
+                    <h5 class="footer-heading">Pricing</h5>
+                    <ul>
+                        <li><a class="footer-heading-para" href="#">Email Only</a></li>
+                        <li><a class="footer-heading-para" href="#">Startups</a></li>
+                        <li><a class="footer-heading-para" href="#">Business</a></li>
+                        <li><a class="footer-heading-para" href="#">Business Plus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div class="col-md-3 col-sm-6 mb-4">
+
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-4">
+                        <h5 class="footer-heading">Get in touch</h5>
+                        <p class="footer-heading-para">1.888.Garaj247 (423.9277)</p>
+                        <p class="footer-heading-para">sales@Garaj247.com</p>
+                    </div>
+
+                    <!-- Subscribe Form -->
+                    <div class="subscribe-section">
+                        <h5 class="footer-heading">Subscribe to the latest news</h5>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="email@Garaj247.com">
+                            <button type="submit" class="subscribe-btn">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="footer-social">
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/fb.svg" alt="">
+                        </a>
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/ig.svg" alt="">
+                        </a>
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/yt.svg" alt="">
+                        </a>
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/li.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification Badges -->
+            <div class="certification-badges">
+                <img src="https://icewarp.com/img/redesign/footer/qes_2017_stamp_iso_9001_en_gr_poz.png"
+                    alt="Certification 1">
+                <img src="https://icewarp.com/img/redesign/footer/qes_2017_stamp_iso_27001_en_gr_poz.png"
+                    alt="Certification 2">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-27017.svg" style="width: 80px;"
+                    alt="Certification 3">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-27018.svg" style="width: 80px;"
+                    alt="Certification 4">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-29119.png" style="width: 80px;"
+                    alt="Certification 5">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-3402.png" style="width: 80px;"
+                    alt="Certification 6">
+                <img src="https://icewarp.com/img/redesign/footer/hipaa-2.svg" style="width: 80px;"
+                    alt="HIPAA Certification">
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex  gap-4">
+                            <p class="footer-text-decoration">
+                                <!-- © Copyright 1999 - 2024. IceWarp Ltd. and IceWarp Inc. All rights reserved. -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 footer-right">
+                        <div class="d-flex justify-content-center gap-4">
+                            <a class="footer-text-decoration" href="#">GDPR</a>
+                            <a class="footer-text-decoration" href="#">Privacy Policy</a>
+                            <a class="footer-text-decoration" href="#">Terms of Service</a>
+                            <a class="footer-text-decoration" href="#">Site Map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript/navigation.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const phrases = [
+                'All at half the cost.',
+                'Boost your productivity.',
+                'Seamless integration.'
+            ];
+
+            const textWrapper = document.getElementById('text-wrapper');
+
+            if (textWrapper) {
+                // Dynamically populate the text-wrapper with phrases
+                textWrapper.innerHTML = phrases.map(phrase => `<div>${phrase}</div>`).join("");
+            } else {
+                console.error("Element with ID 'text-wrapper' not found in the DOM.");
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle dropdown toggle on click
+            document.querySelectorAll('.dropdown-toggle').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdown = this.closest('.dropdown');
+
+                    // Toggle 'show' class on the dropdown
+                    dropdown.classList.toggle('show');
+
+                    // Toggle 'show' class on the dropdown menu
+                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                    if (dropdownMenu) {
+                        dropdownMenu.classList.toggle('show');
+                    }
+
+                    // Close other open dropdowns (optional)
+                    document.querySelectorAll('.dropdown.show').forEach(openDropdown => {
+                        if (openDropdown !== dropdown) {
+                            openDropdown.classList.remove('show');
+                            openDropdown.querySelector('.dropdown-menu').classList.remove('show');
+                        }
+                    });
+                });
+            });
+
+            // Handle dropdown hover for larger screens
+            if (window.innerWidth >= 992) {
+                const dropdowns = document.querySelectorAll('.dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    dropdown.addEventListener('mouseenter', function () {
+                        this.classList.add('show');
+                        const dropdownMenu = this.querySelector('.dropdown-menu');
+                        if (dropdownMenu) {
+                            dropdownMenu.classList.add('show');
+                        }
+                    });
+
+                    dropdown.addEventListener('mouseleave', function () {
+                        this.classList.remove('show');
+                        const dropdownMenu = this.querySelector('.dropdown-menu');
+                        if (dropdownMenu) {
+                            dropdownMenu.classList.remove('show');
+                        }
+                    });
+                });
+            }
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const button = document.querySelector('.dc-button.dc-preview-button');
+
+            button.addEventListener('mouseenter', function () {
+                this.style.backgroundPosition = '100% 50%';
+            });
+
+            button.addEventListener('mouseleave', function () {
+                this.style.backgroundPosition = '0% 50%';
+            });
+        });
+    </script>
+</body>
+
+</html>

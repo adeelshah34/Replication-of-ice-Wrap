@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 600px;
+            position: relative;
+        }
+
+        .main-image-container {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+            position: absolute;
+        }
+
+        .main-image.blur {
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .thumbnail.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-gallery">
+        <!-- Main Displayed Image -->
+        <div class="main-image-container">
+            <img src="https://via.placeholder.com/600x400?text=Main+Image+1" alt="Main Image" class="main-image">
+        </div>
+
+        <!-- Thumbnail Images (Dummy) -->
+        <div class="thumbnail-container">
+            <img src="https://via.placeholder.com/600x400?text=Image+1" alt="Image 1" class="thumbnail">
+            <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2" class="thumbnail">
+            <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3" class="thumbnail">
+            <img src="https://via.placeholder.com/600x400?text=Image+4" alt="Image 4" class="thumbnail">
+            <img src="https://via.placeholder.com/600x400?text=Image+5" alt="Image 5" class="thumbnail">
+            <img src="https://via.placeholder.com/600x400?text=Image+6" alt="Image 6" class="thumbnail">
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainImage = document.querySelector('.main-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            let currentIndex = 0;
+
+            function changeImage(index) {
+                if (index !== currentIndex) {
+                    // Apply blur and fade out to the main image
+                    mainImage.classList.add('blur');
+                    setTimeout(() => {
+                        mainImage.src = thumbnails[index].src;
+                        mainImage.classList.remove('blur');
+                    }, 500); // Wait for the blur effect to finish
+
+                    // Apply slide effect to the next thumbnail image
+                    thumbnails.forEach((thumbnail, i) => {
+                        thumbnail.classList.remove('visible');
+                        if (i === index) {
+                            thumbnail.classList.add('visible');
+                        }
+                    });
+                }
+
+                currentIndex = index;
+            }
+
+            // Add click event to change the main image when thumbnail is clicked
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', () => {
+                    changeImage(index);
+                });
+            });
+
+            // Auto-change image every 5 seconds
+            setInterval(() => {
+                const nextIndex = (currentIndex + 1) % thumbnails.length;
+                changeImage(nextIndex);
+            }, 5000);
+        });
+
+    </script>
+
+</body>
+
+</html>

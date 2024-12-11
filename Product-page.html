@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceWarp Email Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="redesigned.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <style>
+        :root {
+            --primary: #7C3AED;
+            --secondary: #8B5CF6;
+        }
+
+        body {
+            font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            padding: 0 0 0 24px;
+            background: white;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .main-content {
+            margin-left: 160px;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: visible;
+        }
+
+        .features-heading {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: #B5BCC8;
+            display: inline-block;
+            margin-bottom: 16px;
+            white-space: nowrap;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 0 0 12px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #333333;
+        }
+
+        .feature-item:hover {
+            background-color: #f3f4f6;
+        }
+
+        .feature-icon {
+            height: 24px;
+            width: 24px;
+            margin-right: 12px;
+            position: relative;
+        }
+
+        .feature-name {
+            color: #333333;
+            -webkit-transition: ease all 1s;
+            transition: ease all 1s;
+            white-space: nowrap;
+            font-weight: 400;
+            /* This may not work if the font does not support this weight */
+            font-size: 16px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .mail-icon {
+            background: #EEF2FF;
+            color: #6366F1;
+        }
+
+        .chat-icon {
+            background: #E0F2FE;
+            color: #0EA5E9;
+        }
+
+        .conference-icon {
+            background: #ECFDF5;
+            color: #10B981;
+        }
+
+        .storage-icon {
+            background: #FEF3C7;
+            color: #F59E0B;
+        }
+
+        .docs-icon {
+            background: #FEE2E2;
+            color: #EF4444;
+        }
+
+        .dashboard-icon {
+            background: #F3E8FF;
+            color: #9333EA;
+        }
+
+        .gpt-icon {
+            background: #F3F4F6;
+            color: #4B5563;
+        }
+
+        .demo-btn {
+            background: linear-gradient(to right, #FF7E5F, #FEB47B);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            width: 100%;
+            font-weight: 500;
+            margin-top: 2rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .navbar-brand img {
+            width: 100px;
+            height: auto !important;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .navbar-width {
+            max-width: 1400px;
+        }
+
+        @media(min-width: 1920px) {
+            .dc-section-wrapper {
+                width: 40%;
+            }
+        }
+
+
+        .dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+
+        .section-icon-wrapper {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+
+        .section-icon {
+            display: inline-block;
+            height: 48px;
+            width: 48px;
+        }
+
+        .hero-title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            color: #45395B;
+            margin-bottom: 1rem;
+            max-width: 648px;
+            margin: 0 auto 16px;
+            text-align: center;
+        }
+
+        .hero-description {
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-bottom: 2.5rem;
+            color: #45395B;
+            text-align: left;
+            max-width: 648px;
+            margin: auto;
+            text-align: center;
+            font-family: inherit;
+        }
+
+        .interface-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .interface-image {
+            max-width: 872px;
+            width: 100%;
+            margin: -40px 0;
+            -webkit-box-shadow: 0px 8px 32px rgba(114, 127, 150, 0.32);
+            /* box-shadow: 0px 8px 32px rgba(114, 127, 150, 0.32); */
+            border-radius: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .background-circle {
+            position: absolute;
+            height: 450px;
+            background: linear-gradient(180deg, #65E0FF 0%, #648BFF 100%);
+            border-radius: 1000px;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 1096px;
+            width: 1096px;
+        }
+
+        .email-interface {
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .interface-preview {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            padding: 0 1rem;
+        }
+
+        .interface-preview__image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .interface-preview__blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            z-index: 1;
+            filter: blur(60px);
+            opacity: 0.6;
+        }
+
+        .interface-preview__blob--left {
+            background: #4285f4;
+            left: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .interface-preview__blob--right {
+            background: #34a853;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .features-grid {
+            padding: 4rem 0 0 0;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        .feature-card__icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            box-shadow: 0px 9px 10px 2px rgba(114, 127, 150, 0.32);
+        }
+
+        .feature-card__icon {
+            width: 24px;
+            height: 24px;
+            color: #ffffff;
+        }
+
+
+        .feature-card__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            text-align: start;
+        }
+
+        .feature-card__description {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #666666;
+            margin: 0;
+            text-align: start;
+        }
+
+        @media (max-width: 768px) {
+            .interface-preview {
+                margin-bottom: 3rem;
+            }
+
+            .interface-preview__blob {
+                width: 200px;
+                height: 200px;
+            }
+
+            .feature-card {
+                padding: 1.25rem;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        .tc-features {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        /* Header Styles */
+        .tc-features__header {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .tc-features__icon-wrapper {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .tc-features__icon {
+            width: 48px;
+            height: 48px;
+        }
+
+        .tc-features__title {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            color: #45395B;
+            margin-bottom: 1rem;
+            max-width: 648px;
+            margin: 0 auto 16px;
+            text-align: center;
+        }
+
+        .tc-features__description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Preview Section Styles */
+        .tc-preview {
+            margin-bottom: 4rem;
+            /* Enables positioning for child elements */
+            display: flex;
+        }
+
+        .tc-preview__desktop-img {
+            max-width: 700px;
+            -webkit-box-shadow: 0px 8px 32px rgba(114, 127, 150, 0.32);
+            box-shadow: 0px 8px 32px rgba(114, 127, 150, 0.32);
+            border-radius: 14px;
+            position: relative;
+            /* Ensures the image stays above the gradient */
+            margin-right: 300px;
+            margin-left: ;
+        }
+
+        .tc-preview__content {
+            content: "";
+            width: 55%;
+            max-width: 1096px;
+            background: linear-gradient(122.28deg, #6381FB 7.98%, #9172FA 92.02%);
+            border-radius: 40px;
+            padding: 10% 70px 0 20%;
+            text-align: start;
+            position: absolute;
+            top: 16%;
+            right: 0;
+            /* transform: translateY(-50%); */
+            z-index: 1;
+            height: 488px;
+            flex: 1;
+            /* Ensures the content takes up its share of space */
+            align-items: center;
+            justify-content: center;
+
+            background-color: #f3f3f3;
+        }
+
+
+
+        .tc-preview__mobile-content {
+            max-width: 312px;
+            margin-left: auto;
+        }
+
+        .tc-preview__desktop {
+            position: relative;
+            /* Ensure it respects the flow */
+            z-index: 2;
+            /* Places the desktop image above the background */
+        }
+
+        .tc-preview__mobile-icon {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 1rem;
+        }
+
+        .tc-preview__mobile-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tc-preview__mobile-text {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .tc-preview__mobile-img {
+            max-width: 250px;
+            align-self: flex-end;
+        }
+
+        /* Feature Cards Styles */
+        .tc-grid {
+            max-width: 1096px;
+            padding: 0;
+            margin: 5rem auto 0 auto;
+        }
+
+        .tc-card {
+            border-radius: 16px;
+            padding: 1.5rem;
+            height: 100%;
+        }
+
+        /* .tc-card:hover {
+            transform: translateY(-5px);
+        } */
+
+        .tc-card__icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+
+        .tc-preview__desktop-overlay {
+            position: absolute;
+            width: 230px;
+            right: 210px;
+            bottom: -80px;
+        }
+
+
+        .tc-preview__icon {
+            margin-bottom: 1rem;
+        }
+
+        .tc-preview__title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f8f9fa;
+            ;
+        }
+
+        .tc-preview__text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #f8f9fa;
+            /* Light color for readability */
+            margin-bottom: 0;
+        }
+
+
+
+        .tc-card__icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 2.25rem;
+            -webkit-box-shadow: 0px 8px 16px rgba(114, 127, 150, 0.32);
+            box-shadow: 0px 8px 16px rgba(114, 127, 150, 0.32);
+            border-radius: 15px;
+        }
+
+        .tc-card__icon-wrapper--blue {
+            background-color: #3b82f6;
+        }
+
+        .tc-card__icon-wrapper--purple {
+            background-color: #8b5cf6;
+        }
+
+        .tc-card__icon-wrapper--orange {
+            background-color: #f97316;
+        }
+
+        .tc-card__icon-wrapper--green {
+            background-color: #22c55e;
+        }
+
+        .tc-card__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            color: #45395B;
+            margin-bottom: 1rem;
+            text-align: start;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .tc-card__text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #585858;
+            text-align: start;
+        }
+
+        .container-teamchat {
+            width: 100%;
+            position: relative;
+        }
+
+
+        .background-square {
+            max-width: 1194px;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding: 5rem 0;
+            margin: auto;
+            background: #F8F9FA;
+            border-radius: 64px;
+            position: absolute;
+        }
+
+        .mt-100 {
+            margin-top: 100px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .tc-preview {
+                flex-direction: column;
+            }
+
+            .tc-preview__mobile-content {
+                max-width: 100%;
+            }
+
+            .tc-preview__mobile-img {
+                margin-top: 2rem;
+                align-self: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tc-features__title {
+                font-size: 2rem;
+            }
+
+            .tc-preview__mobile {
+                padding: 1.5rem;
+            }
+
+            .tc-preview__mobile-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid navbar-width">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link main-menu-link submenu-dropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                            <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
+                                class="main-menu-dropdown-icon">
+                        </a>
+                        <div class="dropdown-menu main-menu-submenu product">
+                            <div class="dropdown-section">
+                                <div class="dropdown-left">
+                                    <div class="dropdown-item">
+                                        <img src="assets/images/icon-product.svg" alt="Product Features">
+                                        <div>
+                                            <h4>Product Features</h4>
+                                            <p>IceWarp in the daily agenda</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-right">
+                                    <ul>
+                                        <li><a href="#">
+                                                <img src="assets/images/icon-comparison.svg" alt="">
+                                                Comparison</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons d-flex gap-2 align-items-center">
+                    <a href="#" class="btn-login">Login</a>
+                    <button class="btn btn-try-free">Try free for 1 month</button>
+                    <button class="btn btn-contact">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="sidebar">
+            <div class="mb-2">
+                <h2 class="features-heading">FEATURES</h2>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/webmail.svg" alt="">
+                    <div class="feature-name">Mail</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/teamchat.svg" alt="">
+                    <div class="feature-name">TeamChat</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/webmeetings.svg" alt="">
+                    <div class="feature-name">Conferences</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/files.svg" alt="">
+                    <div class="feature-name">Cloud Storage</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/desktop_office.svg" alt="">
+                    <div class="feature-name">Documents</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/dashboard.svg" alt="">
+                    <div class="feature-name">Dashboard</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/ai-icon.svg" alt="">
+                    <div class="feature-name">ChatGPT</div>
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <h2 class="features-heading">HOW WE FIT YOUR DAY</h2>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/menu-emails.svg" alt="">
+                    <div class="feature-name">Check emails</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/menu-call.svg" alt="">
+                    <div class="feature-name">Call with team</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/menu-teamwork.svg" alt="">
+                    <div class="feature-name">Teamwork</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/menu-meeting.svg" alt="">
+                    <div class="feature-name">Meeting</div>
+                </div>
+                <div class="feature-item">
+                    <img class="feature-icon" src="assets/images/menu-union.svg" alt="">
+                    <div class="feature-name">Collaboration</div>
+                </div>
+            </div>
+
+        </div>
+
+        <main class="main-content text-center">
+            <div class="section-icon-wrapper">
+                <img class="section-icon" src="assets/images/webmail.svg" alt="">
+            </div>
+
+            <h1 class="hero-title">Email is the place where all business starts</h1>
+
+            <p class="hero-description">
+                Your inbox is a starting point for TeamChat communication and online meetings while also enabling you to
+                create,
+                share and edit documents as a team. ChatGPT integration lends a hand with smart features such as suggest
+                a reply,
+                make a quick overview or translate. Your notes and tasks, calendars and chats are there too. IceWarp
+                secure cloud
+                solution is accessible from anywhere and works in real-time, so it's suitable for remote work.
+            </p>
+
+            <div class="interface-container">
+                <div class="background-circle"></div>
+                <img src="assets/images/epos-desktop.webp" alt="IceWarp Interface" class="interface-image">
+            </div>
+
+
+            <div class="features-grid container">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="feature-card">
+                            <div class="feature-card__icon-wrapper feature-card__icon-wrapper--purple">
+                                <img src="assets/images/ai-icon.svg" alt="">
+                            </div>
+                            <h3 class="feature-card__title">AI buddy</h3>
+                            <p class="feature-card__description">When you're responding to an email, ChatGPT can draft a
+                                reply based
+                                on the entire email thread. Your chatbot conversations are retained across sessions. And
+                                to
+                                quickly
+                                get the gist of a long message, ChatGPT can make a brief overview highlighting key
+                                points.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="feature-card">
+                            <div class="feature-card__icon-wrapper feature-card__icon-wrapper--yellow">
+                                <img src="assets/images/smart_multitasking.svg" alt="">
+                            </div>
+                            <h3 class="feature-card__title">Smart multitasking</h3>
+                            <p class="feature-card__description">Compose multiple emails while chatting with a coworker,
+                                reviewing a
+                                document or searching through TeamChat rooms. All of this during a conference call.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="feature-card">
+                            <div class="feature-card__icon-wrapper feature-card__icon-wrapper--orange">
+                                <img src="assets/images/smart_planning.svg" alt="">
+                            </div>
+                            <h3 class="feature-card__title">Smart planning</h3>
+                            <p class="feature-card__description">Know immediately if you can accept a proposed meeting.
+                                Interactive
+                                invite dialog shows an overview of your schedule around the indicated time.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="feature-card">
+                            <div class="feature-card__icon-wrapper feature-card__icon-wrapper--blue">
+                                <img src="assets/images/smart_attachments.svg" alt="">
+                            </div>
+                            <h3 class="feature-card__title">Smart attachments</h3>
+                            <p class="feature-card__description">SmartAttach uploads large files like videos or
+                                presentations to our
+                                cloud and automatically includes a link in the email. So your file is delivered fast and
+                                doesn't
+                                clog your recipient's mailbox.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="background-square mt-100">
+                <div class="container-teamchat">
+                    <!-- Header Section -->
+                    <div class="tc-features__header text-center">
+                        <div class="tc-features__icon-wrapper">
+                            <img src="/placeholder.svg?height=50&width=50" alt="TeamChat Icon"
+                                class="tc-features__icon">
+                        </div>
+                        <h2 class="tc-features__title">TeamChat, beyond email communication</h2>
+                        <p class="tc-features__description">
+                            Chat in teams organized around projects, upload files, mention coworkers, comment on posted
+                            emails, pin
+                            important posts or use the embedded ChatGPT functionality. Integration with email enables
+                            sharing messages
+                            from inbox to a TeamChat room for colleagues' attention.
+                        </p>
+                    </div>
+
+                    <!-- Interface Preview Section -->
+                    <div class="tc-preview">
+                        <div class="tc-preview__desktop">
+                            <img src="https://wwwcdnv2.icewarp.com/img/redesign/epos-product/images/teamchat-desktop.webp?v=1"
+                                alt="Desktop Interface" class="tc-preview__desktop-img">
+                            <img src="https://wwwcdnv2.icewarp.com/img/redesign/epos-product/images/teamchat-mobile.webp?v=1"
+                                alt="Mobile Interface" class="tc-preview__desktop-overlay">
+                        </div>
+                        <div class="tc-preview__content mt-4">
+                            <div class="tc-preview__icon">
+                                <img src="https://wwwcdnv2.icewarp.com/img/redesign/epos-product/images/icons/iw_mobile.svg?v=1"
+                                    alt="Message Icon" class="tc-preview__icon-img">
+                            </div>
+                            <h3 class="tc-preview__title">Faster and more straightforward than email.</h3>
+                            <p class="tc-preview__text">
+                                Chat and invite guests to brainstorm and collaborate as if they were sitting at the same
+                                desk.
+                                IceWarp mobile helps you stay connected everywhere.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Features Grid -->
+                    <div class="tc-grid">
+                        <div class="row g-4">
+                            <!-- Feature 1 -->
+                            <div class="col-md-3">
+                                <div class="tc-card">
+                                    <div class="tc-card__icon-wrapper">
+                                        <img src="assets/images/email_teamchat.svg" alt="Email Icon"
+                                            class="tc-card__icon">
+                                    </div>
+                                    <h4 class="tc-card__title">Email and TeamChat connected</h4>
+                                    <p class="tc-card__text">
+                                        Sounds basic, works like magic: share emails and incoming emails in TeamChat
+                                        rooms.
+                                        Compose new
+                                        ones with the help of your colleagues. When you're done, you can easily view the
+                                        email right
+                                        from the chat room.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="col-md-3">
+                                <div class="tc-card">
+                                    <div class="tc-card__icon-wrapper">
+                                        <img src="assets/images/ai-icon.svg" alt="AI Icon" class="tc-card__icon">
+                                    </div>
+                                    <h4 class="tc-card__title">Seamless AI integration</h4>
+                                    <p class="tc-card__text">
+                                        IceWarp now integrates ChatGPT across its compose, chat and TeamChat message
+                                        dialogs. Tap the
+                                        embedded AI for help with writing a reply, for translation, to provide a brief
+                                        overview of your
+                                        received email, to assist with stylistic enhancement of your messages and more.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="col-md-3">
+                                <div class="tc-card">
+                                    <div class="tc-card__icon-wrapper">
+                                        <img src="assets/images//teamchat_mobile.svg" alt="Mobile Icon"
+                                            class="tc-card__icon">
+                                    </div>
+                                    <h4 class="tc-card__title">TeamChat Mobile app</h4>
+                                    <p class="tc-card__text">
+                                        All you need is a phone to follow your team's progress from anywhere.
+                                        Immediately
+                                        respond to new
+                                        posts, comment or share files thanks to TeamChat mobile app.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Feature 4 -->
+                            <div class="col-md-3">
+                                <div class="tc-card">
+                                    <div class="tc-card__icon-wrapper">
+                                        <img src="assets/images/free_guest_accounts.svg" alt="Access Icon"
+                                            class="tc-card__icon">
+                                    </div>
+                                    <h4 class="tc-card__title">Free access for all</h4>
+                                    <p class="tc-card__text">
+                                        Invite non-IceWarp free clients and contractors to TeamChat. Our guest accounts
+                                        are
+                                        free and
+                                        unlike other services don't require registration. Simply enable free external
+                                        and
+                                        enable for
+                                        external users as well.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Add hover effect to feature items
+        document.querySelectorAll('.feature-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = '#f3f4f6';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = '';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle dropdown toggle on click
+            document.querySelectorAll('.dropdown-toggle').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdown = this.closest('.dropdown');
+
+                    // Toggle 'show' class on the dropdown
+                    dropdown.classList.toggle('show');
+
+                    // Toggle 'show' class on the dropdown menu
+                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                    if (dropdownMenu) {
+                        dropdownMenu.classList.toggle('show');
+                    }
+
+                    // Close other open dropdowns (optional)
+                    document.querySelectorAll('.dropdown.show').forEach(openDropdown => {
+                        if (openDropdown !== dropdown) {
+                            openDropdown.classList.remove('show');
+                            openDropdown.querySelector('.dropdown-menu').classList.remove('show');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

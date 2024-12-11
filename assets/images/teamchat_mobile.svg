@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="teamchat mobile">
+<g id="box">
+<rect id="background_2" width="48" height="48" rx="15" fill="url(#paint0_linear_6248_64726)"/>
+<g id="ico_32px_TeamChat mobile">
+<path id="Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M31.1377 14.8523L35.6377 22.6465C36.052 23.364 35.8061 24.2814 35.0887 24.6956L19.5003 33.6956C18.7828 34.1098 17.8654 33.864 17.4512 33.1465L12.9512 25.3523C12.537 24.6349 12.7828 23.7175 13.5003 23.3033L29.0887 14.3033C29.8061 13.889 30.7235 14.1349 31.1377 14.8523Z" fill="#FFCB0C"/>
+<rect id="Rectangle_2" x="18.2949" y="13.5" width="12" height="21" rx="1.5" fill="#5586FF"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_6248_64726" x1="72" y1="24" x2="24" y2="-24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EDF3F7"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>

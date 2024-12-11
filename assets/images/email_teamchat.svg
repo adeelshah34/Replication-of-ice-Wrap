@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="email &#38; teamchat">
+<rect id="background_2" width="48" height="48" rx="15" fill="url(#paint0_linear_6248_64715)"/>
+<g id="Icons/32px_WebMail_ico">
+<g id="32px_WebMail_ico">
+<rect id="background" x="12" y="12" width="24" height="24" rx="7.5" fill="url(#paint1_linear_6248_64715)"/>
+<path id="20px_WebMail_ico" fill-rule="evenodd" clip-rule="evenodd" d="M17.25 21.1079V28.5C17.25 28.9142 17.5858 29.25 18 29.25H30C30.4142 29.25 30.75 28.9142 30.75 28.5V21.1076C30.7428 21.1118 30.7355 21.1159 30.7283 21.1199L23.9998 24.858L17.2713 21.1199C17.2642 21.116 17.2571 21.1119 17.25 21.1079ZM29.9998 18.75H18C17.5858 18.75 17.25 19.0858 17.25 19.5V19.8266C17.2563 20.092 17.4027 20.3349 17.6356 20.4643L23.9998 24L30.364 20.4643C30.6021 20.332 30.7498 20.0811 30.7498 19.8087V19.5C30.7498 19.0858 30.414 18.75 29.9998 18.75Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_6248_64715" x1="72" y1="24" x2="24" y2="-24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EDF3F7"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_6248_64715" x1="12" y1="12" x2="12" y2="36" gradientUnits="userSpaceOnUse">
+<stop stop-color="#64E0FF"/>
+<stop offset="1" stop-color="#648AFF"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,345 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceWarp Pricing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/pricing-styles.css">
+</head>
+
+<body>
+    <div class="pricing-page-wrapper">
+        <div class="container pricing-page-container" id="pricingSection">
+            <h1 class="text-center mb-4">Find your best solution</h1>
+
+
+            <div class="pricing-toggle-container text-center mb-5">
+                <div class="btn-group" role="group" aria-label="Hosting type">
+                    <button type="button" class="btn pricing-btn-toggle active" data-type="cloud">Cloud</button>
+                    <button type="button" class="btn pricing-btn-toggle" data-type="self-hosted">Self Hosted</button>
+                </div>
+            </div>
+
+
+            <div class="location-selector mb-4">
+                <select class="form-select">
+                    <option selected>Italy, Cosine (Multilivello)</option>
+                    <option>USA, Reston VA (CoreSite)</option>
+                    <option>Germany, Frankfurt (Interxion)</option>
+                </select>
+                <p class="location-info mt-2">
+                    Unlike other cloud services, IceWarp stores your data only in the datacenter of your choice.
+                    This is to ensure full compliance with any legal regulations that apply to you.
+                </p>
+            </div>
+
+
+            <div class="row pricing-cards-container">
+
+                <div class="col-md-4">
+                    <div class="card pricing-card" data-plan="startup">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-3">One month free</span>
+                            <h3 class="pricing-card-title">Startup</h3>
+                            <div class="pricing-features">
+                                <p><i class="bi bi-people"></i> 10 users</p>
+                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
+                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="pricing-currency">$</span>
+                                <span class="pricing-amount">23</span>
+                                <span class="pricing-period">/10 users /mo</span>
+                            </div>
+                            <button class="btn btn-outline-primary w-100 select-plan-btn">Get Startup package</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card pricing-card pricing-popular" data-plan="business">
+                        <div class="pricing-popular-badge">Most popular</div>
+                        <div class="card-body">
+                            <span class="badge bg-success mb-3">One month free</span>
+                            <h3 class="pricing-card-title">Business</h3>
+                            <div class="pricing-features">
+                                <p><i class="bi bi-people"></i> Up to 500 users</p>
+                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
+                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="pricing-currency">$</span>
+                                <span class="pricing-amount">3.50</span>
+                                <span class="pricing-period">/user /mo</span>
+                            </div>
+                            <button class="btn btn-primary w-100 select-plan-btn">Get Business</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card pricing-card" data-plan="custom">
+                        <div class="card-body">
+                            <h3 class="pricing-card-title">Custom Quote</h3>
+                            <div class="pricing-features">
+                                <p><i class="bi bi-people"></i> Starting from 500 users</p>
+                                <p><i class="bi bi-building"></i> Ideal for Business, Public, EDU, Corporates or Web
+                                    hostings.</p>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="pricing-custom-price">Custom price</span>
+                            </div>
+                            <button class="btn btn-outline-primary w-100 select-plan-btn">Request a quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-features-table mt-5">
+
+            </div>
+        </div>
+
+
+        <div class="package-selection-section" id="packageSelectionSection" style="display: none;">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-md-4 col-lg-3 sidebar">
+                        <div class="back-to-pricing mb-4">
+                            <a href="#" id="backToPricing"><i class="bi bi-arrow-left"></i> Back to the pricing</a>
+                        </div>
+                        <div class="location-selector mb-4">
+                            <select class="form-select">
+                                <option selected>Italy, Cosine (Multilivello)</option>
+                                <option>USA, Reston VA (CoreSite)</option>
+                                <option>Germany, Frankfurt (Interxion)</option>
+                            </select>
+                        </div>
+                        <div class="selected-package-card">
+                            <div class="most-popular-badge">Most popular</div>
+                            <div class="free-badge">One month free</div>
+                            <h3>Business</h3>
+                            <ul class="package-features">
+                                <li><i class="bi bi-people"></i> Up to 500 users</li>
+                                <li><i class="bi bi-envelope"></i> 200GB email storage /user</li>
+                                <li><i class="bi bi-folder"></i> 1TB file storage /user</li>
+                            </ul>
+                            <div class="package-price">
+                                <span class="currency">$</span>
+                                <span class="amount">3.50</span>
+                                <span class="period">/user /mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-lg-9 main-content">
+                        <h2 id="selectedPlanName" class="mb-4">Business</h2>
+                        <div class="subscription-period mb-4">
+                            <h3>Select your subscription period:</h3>
+                            <div class="btn-group" role="group" aria-label="Subscription period">
+                                <button type="button" class="btn btn-outline-primary active"
+                                    data-period="monthly">Monthly</button>
+                                <button type="button" class="btn btn-outline-primary" data-period="yearly">
+                                    Yearly
+                                    <span class="save-badge">Save 17%</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="features-list">
+
+                            <div class="feature-item">
+                                <img src="/placeholder.svg?height=40&width=40" alt="Email" class="feature-icon">
+                                <div class="feature-details">
+                                    <h4>Hosted Email on your own domains</h4>
+                                    <p>200GB storage per mailbox</p>
+                                </div>
+                                <div class="feature-availability">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript/pricing-script.js"></script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceWarp Pricing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/pricing-styles.css">
+</head>
+
+<body>
+    <div class="pricing-page-wrapper">
+        <div class="container pricing-page-container" id="pricingSection">
+            <h1 class="text-center mb-4">Find your best solution</h1>
+
+            <div class="pricing-toggle-container text-center mb-5">
+                <div class="btn-group" role="group" aria-label="Hosting type">
+                    <button type="button" class="btn pricing-btn-toggle active" data-type="cloud">Cloud</button>
+                    <button type="button" class="btn pricing-btn-toggle" data-type="self-hosted">Self Hosted</button>
+                </div>
+            </div>
+
+            <div class="location-selector mb-4">
+                <select class="form-select">
+                    <option selected>Italy, Cosine (Multilivello)</option>
+                    <option>USA, Reston VA (CoreSite)</option>
+                    <option>Germany, Frankfurt (Interxion)</option>
+                </select>
+                <p class="location-info mt-2">
+                    Unlike other cloud services, IceWarp stores your data only in the datacenter of your choice.
+                    This is to ensure full compliance with any legal regulations that apply to you.
+                </p>
+            </div>
+
+            <div class="row pricing-cards-container">
+                <div class="col-md-4">
+                    <div class="card pricing-card" data-plan="startup">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-3">One month free</span>
+                            <h3 class="pricing-card-title">Startup</h3>
+                            <div class="pricing-features">
+                                <p><i class="bi bi-people"></i> 10 users</p>
+                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
+                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="pricing-currency">$</span>
+                                <span class="pricing-amount">23</span>
+                                <span class="pricing-period">/10 users /mo</span>
+                            </div>
+                            <button class="btn btn-outline-primary w-100 select-plan-btn">Get Startup package</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card pricing-card pricing-popular" data-plan="business">
+                        <div class="pricing-popular-badge">Most popular</div>
+                        <div class="card-body">
+                            <span class="badge bg-success mb-3">One month free</span>
+                            <h3 class="pricing-card-title">Business</h3>
+                            <div class="pricing-features">
+                                <p><i class="bi bi-people"></i> Up to 500 users</p>
+                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
+                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="pricing-currency">$</span>
+                                <span class="pricing-amount">3.50</span>
+                                <span class="pricing-period">/user /mo</span>
+                            </div>
+                            <button class="btn btn-primary w-100 select-plan-btn">Get Business</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card pricing-card" data-plan="custom">
+                        <div class="card-body">
+                            <h3 class="pricing-card-title">Custom Quote</h3>
+                            <div class="pricing-features">
+                                <p><i class="bi bi-people"></i> Starting from 500 users</p>
+                                <p><i class="bi bi-building"></i> Ideal for Business, Public, EDU, Corporates or Web
+                                    hostings.</p>
+                            </div>
+                            <div class="pricing-price">
+                                <span class="pricing-custom-price">Custom price</span>
+                            </div>
+                            <button class="btn btn-outline-primary w-100 select-plan-btn">Request a quote</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-selection-section" id="packageSelectionSection" style="display: none;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 sidebar">
+                        <div class="back-to-pricing mb-4">
+                            <a href="#" id="backToPricing"><i class="bi bi-arrow-left"></i> Back to the pricing</a>
+                        </div>
+                        <div class="location-selector mb-4">
+                            <select class="form-select">
+                                <option selected>Italy, Cosine (Multilivello)</option>
+                                <option>USA, Reston VA (CoreSite)</option>
+                                <option>Germany, Frankfurt (Interxion)</option>
+                            </select>
+                        </div>
+                        <div class="selected-package-card">
+                            <div class="most-popular-badge">Most popular</div>
+                            <div class="free-badge">One month free</div>
+                            <h3>Business</h3>
+                            <ul class="package-features">
+                                <li><i class="bi bi-people"></i> Up to 500 users</li>
+                                <li><i class="bi bi-envelope"></i> 200GB email storage /user</li>
+                                <li><i class="bi bi-folder"></i> 1TB file storage /user</li>
+                            </ul>
+                            <div class="package-price">
+                                <span class="currency">$</span>
+                                <span class="amount">3.50</span>
+                                <span class="period">/user /mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-lg-9 main-content">
+                        <h2 id="selectedPlanName" class="mb-4">Business</h2>
+                        <div class="subscription-period mb-4">
+                            <h3>Select your subscription period:</h3>
+                            <div class="btn-group" role="group" aria-label="Subscription period">
+                                <button type="button" class="btn btn-outline-primary active"
+                                    data-period="monthly">Monthly</button>
+                                <button type="button" class="btn btn-outline-primary" data-period="yearly">
+                                    Yearly
+                                    <span class="save-badge">Save 17%</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <img src="/placeholder.svg?height=40&width=40" alt="Email" class="feature-icon">
+                                <div class="feature-details">
+                                    <h4>Hosted Email on your own domains</h4>
+                                    <p>200GB storage per mailbox</p>
+                                </div>
+                                <div class="feature-availability">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript/pricing-script.js"></script>
+</body>
+
+</html>
