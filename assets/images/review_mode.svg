@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="review mode">
+<g id="box">
+<rect id="background_2" width="48" height="48" rx="15" fill="url(#paint0_linear_6248_64871)"/>
+<g id="reviewmode_ico">
+<rect id="Rectangle" x="12" y="12" width="24" height="24" rx="11.25" fill="url(#paint1_linear_6248_64871)"/>
+<path id="Fill 1" fill-rule="evenodd" clip-rule="evenodd" d="M28.6667 24.1429C28.6667 26.664 26.5737 28.7143 24 28.7143C21.4263 28.7143 19.3333 26.664 19.3333 24.1429C19.3333 21.6217 21.4263 19.5714 24 19.5714V21.8571L28.6667 18.4286L24 15V17.2857C20.1337 17.2857 17 20.3554 17 24.1429C17 27.9303 20.1337 31 24 31C27.8663 31 31 27.9303 31 24.1429H28.6667Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_6248_64871" x1="72" y1="24" x2="24" y2="-24" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EDF3F7"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_6248_64871" x1="24" y1="12" x2="24" y2="36" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6381FB"/>
+<stop offset="1" stop-color="#9172FA"/>
+</linearGradient>
+</defs>
+</svg>
