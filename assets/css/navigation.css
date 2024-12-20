@@ -9,7 +9,6 @@
     display: flex;
     width: 100%;
     position: relative;
-    max-width: 1140px;
 }
 
 .navigation {
@@ -21,7 +20,8 @@
 }
 
 .carousel-top {
-    margin-top: 50px;
+    margin-bottom: 100px;
+    align-items: center;
 }
 
 .nav-item {
@@ -38,16 +38,15 @@
     justify-content: flex-end;
     text-align: right;
     color: #333333;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     padding-right: 5px;
     padding-bottom: 1.2rem;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     transform: scale(1);
-    /* Default scale */
     font-weight: normal;
-    /* Default weight */
+    font-weight: 500;
 }
 
 .nav-item:hover {
@@ -81,12 +80,10 @@
 
 .carousel-container {
     position: relative;
-    width: 80%;
-    height: 500px;
+    height: 650px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    /* Ensures slides stay within bounds */
 
 }
 
@@ -95,7 +92,6 @@
     height: 100%;
     flex: 1 1 calc(100% / 7);
     /* Divides the container into 7 equal parts */
-    opacity: 0.5;
     transform-origin: center;
     z-index: 1;
     object-fit: cover;
