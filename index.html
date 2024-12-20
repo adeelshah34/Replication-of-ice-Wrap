@@ -404,10 +404,6 @@
             transition: background-color 0.3s ease;
         }
 
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
-
         .dropdown-item img {
             width: 32px;
             height: 32px;
@@ -518,6 +514,7 @@
             gap: 10px;
             flex-wrap: wrap;
             padding-left: 94px;
+            margin-bottom: 5px;
         }
 
         .certification-badges img {
@@ -599,20 +596,22 @@
                             <div class="dropdown-menu main-menu-submenu product">
                                 <div class="dropdown-section">
                                     <div class="dropdown-left">
-                                        <div class="dropdown-item">
+                                        <a href="your-link-here" class="dropdown-item">
                                             <img src="assets/images/icon-product.svg" alt="Product Features">
                                             <div>
                                                 <h4>Product Features</h4>
                                                 <p>IceWarp in the daily agenda</p>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="dropdown-divider"></div>
                                     <div class="dropdown-right">
                                         <ul>
-                                            <li><a href="Product-page.html">
+                                            <li>
+                                                <a href="Product-page.html">
                                                     <img src="assets/images/icon-comparison.svg" alt="">
-                                                    Comparison</a></li>
+                                                    Comparison</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -661,7 +660,6 @@
             <button class="nav-button prev-button">
                 <i class="fas fa-arrow-up"></i>
             </button>
-
             <div class="nav-item" data-pos="0">Email & AI</div>
             <div class="nav-item" data-pos="1">TeamChat & AI</div>
             <div class="nav-item" data-pos="2">Documents & AI</div>
@@ -673,34 +671,40 @@
                 <i class="fas fa-arrow-down"></i>
             </button>
         </div>
-
         <!-- Carousel -->
         <div class="carousel-container">
-            <div class="carousel-slide active" data-pos="0">
+            <div class="carousel-slide" data-pos="0"
+                style="z-index: 7 !important; transform: translateY(-84px) scale(1)  !important;">
                 <img src="assets/images/Mail-min.webp" alt="Email & AI"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
-            <div class="carousel-slide" data-pos="1">
+            <div class="carousel-slide" data-pos="1"
+                style="z-index: 6 !important; transform: translateY(-72px) scale(0.95) !important; opacity: 0;">
                 <img src="assets/images/TeamChat-min.webp" alt="TeamChat & AI"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
-            <div class="carousel-slide" data-pos="2">
+            <div class="carousel-slide" data-pos="2"
+                style="z-index: 5 !important; transform: translateY(-60px) scale(0.9) !important;">
                 <img src="assets/images/Documents-min.webp" alt="Documents & AI"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
-            <div class="carousel-slide" data-pos="3">
+            <div class="carousel-slide" data-pos="3"
+                style="z-index: 4 !important; transform: translateY(-48px) scale(0.85) !important;">
                 <img src="assets/images/Calendar-min.webp" alt="Calendar"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
-            <div class="carousel-slide" data-pos="4">
+            <div class="carousel-slide" data-pos="4"
+                style="z-index: 3 !important; transform: translateY(-36px) scale(0.8) !important;">
                 <img src="assets/images/Confe-min.webp" alt="Conferences"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
-            <div class="carousel-slide" data-pos="5">
+            <div class="carousel-slide" data-pos="5"
+                style="z-index: 2 !important; transform: translateY(-24px) scale(0.75) !important;">
                 <img src="assets/images/Notes-min_1.webp" alt="Notes"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
-            <div class="carousel-slide" data-pos="6">
+            <div class="carousel-slide" data-pos="6"
+                style="z-index: 1 !important; transform: translateY(-12px) scale(0.7) !important;">
                 <img src="assets/images/Dash-min.webp" alt="Calendar"
                     style="height: 100%; object-fit: cover; border-radius: 15px;">
             </div>
@@ -818,9 +822,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const phrases = [
-                'All at half the cost.',
-                'Boost your productivity.',
-                'Seamless integration.'
+                'Get more features for Less.',
+                'All components in a single window.',
+                'All in a single package.',
+                'Boost your Productivity.'
             ];
 
             const textWrapper = document.getElementById('text-wrapper');

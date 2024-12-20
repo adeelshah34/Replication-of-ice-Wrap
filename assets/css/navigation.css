@@ -96,7 +96,6 @@
     flex: 1 1 calc(100% / 7);
     /* Divides the container into 7 equal parts */
     opacity: 0.5;
-    transition: transform 0.5s ease, opacity 0.5s ease;
     transform-origin: center;
     z-index: 1;
     object-fit: cover;
@@ -108,7 +107,7 @@
     opacity: 1;
     z-index: 2;
     margin-top: -50px;
-    transform: scale(1).1;
+    transform: translateY(-40px) scale(1) !important;
 }
 
 .nav-item.active {
