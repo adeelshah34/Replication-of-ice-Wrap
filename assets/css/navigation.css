@@ -212,6 +212,6 @@
 .navigation {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     /* Center navigation items and buttons */
 }

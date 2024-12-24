@@ -3216,3 +3216,8 @@ body {
     text-decoration: none;
     padding: 14px 0;
 }
+
+.check-email-bottom-img {
+    z-index: 1;
+    width: 100%;
+}

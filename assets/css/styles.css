@@ -672,6 +672,7 @@
 
 .next-button {
     right: calc(15%);
+    margin-top: -6px !important;
 }
 
 .slider-button:disabled {

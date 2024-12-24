@@ -46,55 +46,70 @@
             color: #7166F9;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 30px;
+            /* margin-bottom: 30px; */
             position: relative;
-            height: 60px;
-            /* Set height to show one line of text */
+            height: 70px;
             overflow: hidden;
-            /* Hide overflowing content */
         }
 
         .text-wrapper {
             position: relative;
-            animation: scrollText 6s linear infinite;
-            /* Scrolling animation */
+            overflow: hidden;
+            /* Hide overflowing text */
+            animation: scrollText 12s linear infinite;
+            /* Adjusted for four items */
         }
 
         .text-wrapper div {
             height: 60px;
-            /* Match the container height */
-            line-height: 60px;
+            /* Match container height */
+            line-height: 59px;
             /* Vertically center text */
+            white-space: nowrap;
+            /* Prevent text wrapping */
         }
 
         @keyframes scrollText {
             0% {
                 transform: translateY(0);
-                /* Start with the first phrase */
+                /* Show the first phrase */
             }
 
-            33% {
+            25% {
                 transform: translateY(0);
                 /* Hold the first phrase */
             }
 
-            50% {
+            33.33% {
                 transform: translateY(-60px);
                 /* Move to the second phrase */
             }
 
-            83% {
+            50% {
                 transform: translateY(-60px);
                 /* Hold the second phrase */
             }
 
-            100% {
+            58.33% {
                 transform: translateY(-120px);
                 /* Move to the third phrase */
             }
+
+            75% {
+                transform: translateY(-120px);
+                /* Hold the third phrase */
+            }
+
+            83.33% {
+                transform: translateY(-180px);
+                /* Move to the fourth phrase */
+            }
+
+            100% {
+                transform: translateY(-180px);
+                /* Hold the fourth phrase */
+            }
         }
-
-
 
 
         .description {
@@ -740,15 +755,15 @@
                     <!-- Contact Info -->
                     <div class="contact-info mb-4">
                         <h5 class="footer-heading">Get in touch</h5>
-                        <p class="footer-heading-para">1.888.Garaj247 (423.9277)</p>
-                        <p class="footer-heading-para">sales@Garaj247.com</p>
+                        <p class="footer-heading-para">+92 3041110365</p>
+                        <p class="footer-heading-para">cloud.support@jazz.com.pk</p>
                     </div>
 
                     <!-- Subscribe Form -->
                     <div class="subscribe-section">
                         <h5 class="footer-heading">Subscribe to the latest news</h5>
                         <form class="subscribe-form">
-                            <input type="email" placeholder="email@Garaj247.com">
+                            <input type="email" placeholder="cloud.support@jazz.com.pk">
                             <button type="submit" class="subscribe-btn">
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -802,10 +817,9 @@
                     </div>
                     <div class="col-md-6 footer-right">
                         <div class="d-flex justify-content-center gap-4">
-                            <a class="footer-text-decoration" href="#">GDPR</a>
                             <a class="footer-text-decoration" href="#">Privacy Policy</a>
-                            <a class="footer-text-decoration" href="#">Terms of Service</a>
-                            <a class="footer-text-decoration" href="#">Site Map</a>
+                            <a class="footer-text-decoration" href="assets\doc\SAF for Garaj 247.docx">Terms of
+                                Service</a>
                         </div>
                     </div>
                 </div>
@@ -825,18 +839,21 @@
                 'Get more features for Less.',
                 'All components in a single window.',
                 'All in a single package.',
-                'Boost your Productivity.'
+                'Boost your Productivity',
             ];
 
             const textWrapper = document.getElementById('text-wrapper');
 
             if (textWrapper) {
-                // Dynamically populate the text-wrapper with phrases
-                textWrapper.innerHTML = phrases.map(phrase => `<div>${phrase}</div>`).join("");
+                // Populate the text-wrapper with phrases
+                textWrapper.innerHTML = phrases
+                    .map(phrase => `<div>${phrase}</div>`)
+                    .join("");
             } else {
                 console.error("Element with ID 'text-wrapper' not found in the DOM.");
             }
         });
+
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
