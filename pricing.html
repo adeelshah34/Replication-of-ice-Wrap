@@ -1,184 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IceWarp Pricing</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/pricing-styles.css">
-</head>
-
-<body>
-    <div class="pricing-page-wrapper">
-        <div class="container pricing-page-container" id="pricingSection">
-            <h1 class="text-center mb-4">Find your best solution</h1>
-
-
-            <div class="pricing-toggle-container text-center mb-5">
-                <div class="btn-group" role="group" aria-label="Hosting type">
-                    <button type="button" class="btn pricing-btn-toggle active" data-type="cloud">Cloud</button>
-                    <button type="button" class="btn pricing-btn-toggle" data-type="self-hosted">Self Hosted</button>
-                </div>
-            </div>
-
-
-            <div class="location-selector mb-4">
-                <select class="form-select">
-                    <option selected>Italy, Cosine (Multilivello)</option>
-                    <option>USA, Reston VA (CoreSite)</option>
-                    <option>Germany, Frankfurt (Interxion)</option>
-                </select>
-                <p class="location-info mt-2">
-                    Unlike other cloud services, IceWarp stores your data only in the datacenter of your choice.
-                    This is to ensure full compliance with any legal regulations that apply to you.
-                </p>
-            </div>
-
-
-            <div class="row pricing-cards-container">
-
-                <div class="col-md-4">
-                    <div class="card pricing-card" data-plan="startup">
-                        <div class="card-body">
-                            <span class="badge bg-success mb-3">One month free</span>
-                            <h3 class="pricing-card-title">Startup</h3>
-                            <div class="pricing-features">
-                                <p><i class="bi bi-people"></i> 10 users</p>
-                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
-                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
-                            </div>
-                            <div class="pricing-price">
-                                <span class="pricing-currency">$</span>
-                                <span class="pricing-amount">23</span>
-                                <span class="pricing-period">/10 users /mo</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100 select-plan-btn">Get Startup package</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card pricing-card pricing-popular" data-plan="business">
-                        <div class="pricing-popular-badge">Most popular</div>
-                        <div class="card-body">
-                            <span class="badge bg-success mb-3">One month free</span>
-                            <h3 class="pricing-card-title">Business</h3>
-                            <div class="pricing-features">
-                                <p><i class="bi bi-people"></i> Up to 500 users</p>
-                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
-                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
-                            </div>
-                            <div class="pricing-price">
-                                <span class="pricing-currency">$</span>
-                                <span class="pricing-amount">3.50</span>
-                                <span class="pricing-period">/user /mo</span>
-                            </div>
-                            <button class="btn btn-primary w-100 select-plan-btn">Get Business</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="card pricing-card" data-plan="custom">
-                        <div class="card-body">
-                            <h3 class="pricing-card-title">Custom Quote</h3>
-                            <div class="pricing-features">
-                                <p><i class="bi bi-people"></i> Starting from 500 users</p>
-                                <p><i class="bi bi-building"></i> Ideal for Business, Public, EDU, Corporates or Web
-                                    hostings.</p>
-                            </div>
-                            <div class="pricing-price">
-                                <span class="pricing-custom-price">Custom price</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100 select-plan-btn">Request a quote</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pricing-features-table mt-5">
-
-            </div>
-        </div>
-
-
-        <div class="package-selection-section" id="packageSelectionSection" style="display: none;">
-            <div class="container-fluid">
-                <div class="row">
-
-                    <div class="col-md-4 col-lg-3 sidebar">
-                        <div class="back-to-pricing mb-4">
-                            <a href="#" id="backToPricing"><i class="bi bi-arrow-left"></i> Back to the pricing</a>
-                        </div>
-                        <div class="location-selector mb-4">
-                            <select class="form-select">
-                                <option selected>Italy, Cosine (Multilivello)</option>
-                                <option>USA, Reston VA (CoreSite)</option>
-                                <option>Germany, Frankfurt (Interxion)</option>
-                            </select>
-                        </div>
-                        <div class="selected-package-card">
-                            <div class="most-popular-badge">Most popular</div>
-                            <div class="free-badge">One month free</div>
-                            <h3>Business</h3>
-                            <ul class="package-features">
-                                <li><i class="bi bi-people"></i> Up to 500 users</li>
-                                <li><i class="bi bi-envelope"></i> 200GB email storage /user</li>
-                                <li><i class="bi bi-folder"></i> 1TB file storage /user</li>
-                            </ul>
-                            <div class="package-price">
-                                <span class="currency">$</span>
-                                <span class="amount">3.50</span>
-                                <span class="period">/user /mo</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-8 col-lg-9 main-content">
-                        <h2 id="selectedPlanName" class="mb-4">Business</h2>
-                        <div class="subscription-period mb-4">
-                            <h3>Select your subscription period:</h3>
-                            <div class="btn-group" role="group" aria-label="Subscription period">
-                                <button type="button" class="btn btn-outline-primary active"
-                                    data-period="monthly">Monthly</button>
-                                <button type="button" class="btn btn-outline-primary" data-period="yearly">
-                                    Yearly
-                                    <span class="save-badge">Save 17%</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="features-list">
-
-                            <div class="feature-item">
-                                <img src="/placeholder.svg?height=40&width=40" alt="Email" class="feature-icon">
-                                <div class="feature-details">
-                                    <h4>Hosted Email on your own domains</h4>
-                                    <p>200GB storage per mailbox</p>
-                                </div>
-                                <div class="feature-availability">
-                                    <i class="bi bi-check-circle-fill text-success"></i>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/javascript/pricing-script.js"></script>
-</body>
-
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -187,159 +6,2417 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IceWarp Pricing</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="redesigned.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/product-page.css">
     <link rel="stylesheet" href="assets/css/pricing-styles.css">
 </head>
 
 <body>
-    <div class="pricing-page-wrapper">
-        <div class="container pricing-page-container" id="pricingSection">
-            <h1 class="text-center mb-4">Find your best solution</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar-width">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="pricing-toggle-container text-center mb-5">
-                <div class="btn-group" role="group" aria-label="Hosting type">
-                    <button type="button" class="btn pricing-btn-toggle active" data-type="cloud">Cloud</button>
-                    <button type="button" class="btn pricing-btn-toggle" data-type="self-hosted">Self Hosted</button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link main-menu-link submenu-dropdown" href="/Product-page.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Product
+                                <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
+                                    class="main-menu-dropdown-icon">
+                            </a>
+                            <div class="dropdown-menu main-menu-submenu product">
+                                <div class="dropdown-section">
+                                    <div class="dropdown-left">
+                                        <a href="Product-page.html" class="dropdown-item">
+                                            <img src="assets/images/icon-product.svg" alt="Product Features">
+                                            <div>
+                                                <h4>Product Features</h4>
+                                                <p>IceWarp in the daily agenda</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-right">
+                                        <ul>
+                                            <li>
+                                                <a href="Product-page.html">
+                                                    <img src="assets/images/icon-comparison.svg" alt="">
+                                                    Comparison</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <div class="nav-buttons d-flex gap-2 align-items-center">
+                        <a href="#" class="btn-login">Login</a>
+                        <button class="btn btn-try-free">Try free for 1 month</button>
+                        <button class="btn btn-contact">Contact us</button>
+                    </div>
                 </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="location-selector mb-4">
-                <select class="form-select">
-                    <option selected>Italy, Cosine (Multilivello)</option>
-                    <option>USA, Reston VA (CoreSite)</option>
-                    <option>Germany, Frankfurt (Interxion)</option>
-                </select>
-                <p class="location-info mt-2">
-                    Unlike other cloud services, IceWarp stores your data only in the datacenter of your choice.
-                    This is to ensure full compliance with any legal regulations that apply to you.
-                </p>
+    <div class="pricing-redesing" id="pricing-redesign">
+        <div class="intro-header-wrapper">
+            <div class="title-primary">Find your best solution</div>
+        </div>
+        <div class="button-wrapper" id="hosting-toggle">
+            <div class="button-decoration" id="button-decoration">
             </div>
-
-            <div class="row pricing-cards-container">
-                <div class="col-md-4">
-                    <div class="card pricing-card" data-plan="startup">
-                        <div class="card-body">
-                            <span class="badge bg-success mb-3">One month free</span>
-                            <h3 class="pricing-card-title">Startup</h3>
-                            <div class="pricing-features">
-                                <p><i class="bi bi-people"></i> 10 users</p>
-                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
-                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
-                            </div>
-                            <div class="pricing-price">
-                                <span class="pricing-currency">$</span>
-                                <span class="pricing-amount">23</span>
-                                <span class="pricing-period">/10 users /mo</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100 select-plan-btn">Get Startup package</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card pricing-card pricing-popular" data-plan="business">
-                        <div class="pricing-popular-badge">Most popular</div>
-                        <div class="card-body">
-                            <span class="badge bg-success mb-3">One month free</span>
-                            <h3 class="pricing-card-title">Business</h3>
-                            <div class="pricing-features">
-                                <p><i class="bi bi-people"></i> Up to 500 users</p>
-                                <p><i class="bi bi-envelope"></i> 200GB email storage /user</p>
-                                <p><i class="bi bi-folder"></i> 1TB file storage /user</p>
-                            </div>
-                            <div class="pricing-price">
-                                <span class="pricing-currency">$</span>
-                                <span class="pricing-amount">3.50</span>
-                                <span class="pricing-period">/user /mo</span>
-                            </div>
-                            <button class="btn btn-primary w-100 select-plan-btn">Get Business</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card pricing-card" data-plan="custom">
-                        <div class="card-body">
-                            <h3 class="pricing-card-title">Custom Quote</h3>
-                            <div class="pricing-features">
-                                <p><i class="bi bi-people"></i> Starting from 500 users</p>
-                                <p><i class="bi bi-building"></i> Ideal for Business, Public, EDU, Corporates or Web
-                                    hostings.</p>
-                            </div>
-                            <div class="pricing-price">
-                                <span class="pricing-custom-price">Custom price</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100 select-plan-btn">Request a quote</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="cloud-button active host-option" id="cloud-button">
+                Cloud
+            </div>
+            <div class="self-button host-option" id="self-button">
+                Self Hosted
             </div>
         </div>
-
-        <div class="package-selection-section" id="packageSelectionSection" style="display: none;">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-lg-3 sidebar">
-                        <div class="back-to-pricing mb-4">
-                            <a href="#" id="backToPricing"><i class="bi bi-arrow-left"></i> Back to the pricing</a>
+        <div class="show-plans">Back to the pricing</div>
+        <div class="table-form-wrapper">
+            <div class="pricing-table">
+                <div class="row-wrapper column-decoration">
+                    <div class="column-description column"></div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular">
+                            <div class="popular-decoration">Most popular</div>
                         </div>
-                        <div class="location-selector mb-4">
-                            <select class="form-select">
-                                <option selected>Italy, Cosine (Multilivello)</option>
-                                <option>USA, Reston VA (CoreSite)</option>
-                                <option>Germany, Frankfurt (Interxion)</option>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote"></div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular">
+                            <div class="popular-decoration">Most popular</div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote"></div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-header">
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup" data-column="c-start">
+                            <div class="content-wrapper">
+                                <div class="badge badge-three-months">One month free</div>
+                                <div class="plan-title">Startup</div>
+                                <div class="plan-description-wrapper">
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">10 users</div>
+                                    </div>
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-storage.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">200GB email storage /user</div>
+                                    </div>
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-folder.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">1TB file storage /user</div>
+                                    </div>
+                                </div>
+                                <div class="plan-price-wrapper">
+                                    <div class="plan-price-highlight">23€</div>
+                                    <div class="plan-price">/10 users /mo</div>
+                                </div>
+                                <div class="plan-get-button">Get Startup package</div>
+                                <p class="three-months-free-text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular" data-column="c-busin">
+                            <div class="content-wrapper">
+                                <div class="badge badge-three-months">One month free</div>
+                                <div class="plan-title">Business</div>
+                                <div class="plan-description-wrapper">
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">Up to 500 users</div>
+                                    </div>
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-storage.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">200GB email storage /user</div>
+                                    </div>
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-folder.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">1TB file storage /user</div>
+                                    </div>
+                                </div>
+                                <div class="plan-price-wrapper">
+                                    <div class="plan-price-highlight">3.50€</div>
+                                    <div class="plan-price">/user /mo</div>
+                                </div>
+                                <div class="plan-get-button">Get Business</div>
+                                <p class="three-months-free-text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote" data-column="c-quote">
+                            <div class="content-wrapper">
+                                <div class="badge badge-three-months" style="opacity: 0; pointer-events: none;">One
+                                    month
+                                    free</div>
+                                <div class="plan-title">Custom Quote</div>
+                                <div class="plan-description-wrapper">
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">Starting from 500 users</div>
+                                    </div>
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-company.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">Ideal for Business, Public, EDU, Corporates or Web
+                                            hostings.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plan-price-wrapper">
+                                    <div class="plan-price-highlight"></div>
+                                    <div class="plan-price">Custom price</div>
+                                </div>
+                                <div class="plan-get-button plan-get-button-quote">Request a quote</div>
+                                <p class="three-months-free-text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular" data-column="s-licen">
+                            <div class="content-wrapper">
+                                <div class="badge badge-three-months">One month free</div>
+                                <div class="plan-title">Licence subscription</div>
+                                <div class="plan-description-wrapper">
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">Up to 500 users</div>
+                                    </div>
+                                </div>
+                                <div class="plan-price-wrapper">
+                                    <div class="plan-price-highlight">$3</div>
+                                    <div class="plan-price">/user /mo</div>
+                                </div>
+                                <div class="plan-get-button">Get Licence</div>
+                                <p class="three-months-free-text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote" data-column="s-quote">
+                            <div class="content-wrapper">
+                                <div class="badge badge-three-months" style="opacity: 0; pointer-events: none;">One
+                                    month
+                                    free</div>
+                                <div class="plan-title">Custom Quote</div>
+                                <div class="plan-description-wrapper">
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">Starting from 500 users</div>
+                                    </div>
+                                    <div class="plan-description">
+                                        <div class="plan-icon"><img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-company.svg"
+                                                alt=""></div>
+                                        <div class="plan-text">Ideal for Business, Public, EDU, Corporates or Web
+                                            hostings.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plan-price-wrapper">
+                                    <div class="plan-price-highlight">&ZeroWidthSpace;</div>
+                                    <div class="plan-price">Custom price</div>
+                                </div>
+                                <div class="plan-get-button plan-get-button-quote">Request a quote</div>
+                                <p class="three-months-free-text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-webmail.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mMail">Hosted Email on your own domains</a>
+                                <div class="column-feature-subtitle">200GB storage per mailbox</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-teamChat.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mTeamChat">TeamChat</a>
+                                <div class="column-feature-subtitle">Chat in teams organized around projects</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-conference.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mConfe">Conferencing</a>
+                                <div class="column-feature-subtitle">Hold meetups and webinars for up to 1000 attendees
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-recording.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mRecord">Unlimited HD Recording</a>
+                                <div class="column-feature-subtitle">Record and share your meetings in the cloud</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-ai.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mAI">ChatGPT Integration</a>
+                                <div class="column-feature-subtitle">Powerful AI buddy for your office agenda. Works
+                                    across
+                                    Email, TeamChat and Documents.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-storage.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mStorage">Cloud storage</a>
+                                <div class="column-feature-subtitle">Each user gets 1TB cloud storage</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mOffice">Office Documents</a>
+                                <div class="column-feature-subtitle">Documents, Spreadsheets and Presentations</div>
+                            </div>
+                        </div>
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-collab.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mCollab">Collaborative editing</a>
+                                <div class="column-feature-subtitle">Edit shared documents with colleagues</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-dashboard.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mDash">Dashboard</a>
+                                <div class="column-feature-subtitle">Your personalized workspace</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-calendar.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mCalendar">Calendar</a>
+                                <div class="column-feature-subtitle">Stay on top of your every day</div>
+                            </div>
+                        </div>
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-exchange.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mExchange">Mobile sync</a>
+                                <div class="column-feature-subtitle">Natively connect iOS and Android devices</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-notes.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mNotes">Notes</a>
+                                <div class="column-feature-subtitle">Brand new notes</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-antispam.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mSecurity">Security</a>
+                                <div class="column-feature-subtitle">Antispam and antivirus</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="green-checkmark"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"><span
+                                class="green-checkmark"></span>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-data">
+                    <div class="column-description column">
+                        <div class="column-feature-wrapper">
+                            <div class="column-feature-img">
+                                <img class="plan-img"
+                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                    alt="">
+                            </div>
+                            <div class="column-feature-text-wrapper">
+                                <a class="column-feature-title" data-modal="mDesktopSuite">Desktop Suite</a>
+                                <div class="column-feature-subtitle">Bundle of native desktop applications for Windows
+                                    and
+                                    Mac</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"><span class="gray-cross"></span></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular">Optional</div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular">Optional</div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote">Optional</div>
+                    </div>
+                </div>
+                <div class="row-wrapper row-last">
+                    <div class="column-description column"></div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup" data-column="c-start">
+                            <div class="plan-get-button">Get Startup package</div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular" data-column="c-busin">
+                            <div class="plan-get-button">Get Business</div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote" data-column="c-quote">
+                            <div class="plan-get-button plan-get-button-quote">Request a quote</div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular" data-column="s-licen">
+                            <div class="plan-get-button">Get Licence</div>
+                        </div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote" data-column="s-quote">
+                            <div class="plan-get-button plan-get-button-quote">Request a quote</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-wrapper column-decoration column-decoration-last">
+                    <div class="column-description column"></div>
+                    <div class="column-wrapper c-start">
+                        <div class="column column-plan column-startup"></div>
+                    </div>
+                    <div class="column-wrapper c-busin">
+                        <div class="column column-plan column-business column-popular"></div>
+                    </div>
+                    <div class="column-wrapper c-quote">
+                        <div class="column column-plan column-quote"></div>
+                    </div>
+                    <div class="column-wrapper s-licen"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-business column-popular"></div>
+                    </div>
+                    <div class="column-wrapper s-quote"
+                        style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                        <div class="column column-plan column-quote"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- start of responsive layout -->
+            <div class="table-responsive-wrapper">
+                <div class="row-wrapper row-header" style="margin-bottom: 40px">
+                    <div class="column-description column">
+                        <div class="cloud-additional-wrapper">
+                            <select class="column-description-datacenter-dropdown" id="dc_select_mobile" value="5">
+                                <optgroup label="DATACENTERS">
+                                    <option value="3">DE, Nuernberg (Hetzner Online)</option>
+                                    <option value="2">USA, Reston VA (CoreSite)</option>
+                                    <option value="12">South Africa, Centurion (ICT Globe)</option>
+                                    <option value="11">India, Mumbai (IceWarp India)</option>
+                                    <option value="7">Bahrain, Manama (Kalaam Telecom)</option>
+                                    <option selected="" value="5">Italy, Cuneo (Multiwire)</option>
+                                    <option value="1">CZ, Prague (TTC Teleport)</option>
+                                </optgroup>
                             </select>
                         </div>
-                        <div class="selected-package-card">
-                            <div class="most-popular-badge">Most popular</div>
-                            <div class="free-badge">One month free</div>
-                            <h3>Business</h3>
-                            <ul class="package-features">
-                                <li><i class="bi bi-people"></i> Up to 500 users</li>
-                                <li><i class="bi bi-envelope"></i> 200GB email storage /user</li>
-                                <li><i class="bi bi-folder"></i> 1TB file storage /user</li>
-                            </ul>
-                            <div class="package-price">
-                                <span class="currency">$</span>
-                                <span class="amount">3.50</span>
-                                <span class="period">/user /mo</span>
+                    </div>
+                </div>
+
+                <div class="responsive-columns">
+                    <!-- startup column -->
+                    <div class="mobile-column startup-column c-start-m">
+                        <div class="row-wrapper row-header">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup" data-column="c-start-mobile">
+                                    <div class="content-wrapper">
+                                        <div class="badge badge-three-months">One month free</div>
+                                        <div class="plan-title">Startup</div>
+                                        <div class="plan-description-wrapper">
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">10 users</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-storage.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">200GB email storage /user</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-folder.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">1TB file storage /user</div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-price-wrapper">
+                                            <div class="plan-price-highlight">23€</div>
+                                            <div class="plan-price">/10 users /mo</div>
+                                        </div>
+                                        <div class="plan-get-button">Get Startup package</div>
+                                        <p class="three-months-free-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-feature-wrapper">
+                                        <div class="column-feature-img">
+                                            <img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-webmail.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="column-feature-text-wrapper">
+                                            <a class="column-feature-title" data-modal="mMail">Hosted Email on your own
+                                                domains</a>
+                                            <div class="column-feature-subtitle">200GB storage per mailbox</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-feature-wrapper">
+                                        <div class="column-feature-img">
+                                            <img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-teamChat.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="column-feature-text-wrapper">
+                                            <a class="column-feature-title" data-modal="mTeamChat">TeamChat</a>
+                                            <div class="column-feature-subtitle">Chat in teams organized around projects
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-conference.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mConfe">Conferencing</a>
+                                                <div class="column-feature-subtitle">Hold meetups and webinars for up to
+                                                    1000 attendees</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-recording.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mRecord">Unlimited HD
+                                                    Recording</a>
+                                                <div class="column-feature-subtitle">Record and share your meetings in
+                                                    the
+                                                    cloud</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-ai.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mAI">ChatGPT Integration</a>
+                                                <div class="column-feature-subtitle">Powerful AI buddy for your office
+                                                    agenda. Works across Email, TeamChat and Documents.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-storage.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mStorage">Cloud storage</a>
+                                                <div class="column-feature-subtitle">Each user gets 1TB cloud storage
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mOffice">Office
+                                                    Documents</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-collab.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCollab">Collaborative
+                                                    editing</a>
+                                                <div class="column-feature-subtitle">Edit shared documents with
+                                                    colleagues
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-dashboard.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDash">Dashboard</a>
+                                                <div class="column-feature-subtitle">Your personalized workspace</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-calendar.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCalendar">Calendar</a>
+                                                <div class="column-feature-subtitle">Stay on top of your every day</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-exchange.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mExchange">Mobile sync</a>
+                                                <div class="column-feature-subtitle">Natively connect iOS and Android
+                                                    devices</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-notes.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mNotes">Notes</a>
+                                                <div class="column-feature-subtitle">Brand new notes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-antispam.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mSecurity">Security</a>
+                                                <div class="column-feature-subtitle">Antispam and antivirus</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-last">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup" data-column="c-start">
+                                    <div class="plan-get-button">Get Startup package</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper column-decoration column-decoration-last">
+                            <div class="column-wrapper c-start-mobile">
+                                <div class="column column-plan column-startup"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-8 col-lg-9 main-content">
-                        <h2 id="selectedPlanName" class="mb-4">Business</h2>
-                        <div class="subscription-period mb-4">
-                            <h3>Select your subscription period:</h3>
-                            <div class="btn-group" role="group" aria-label="Subscription period">
-                                <button type="button" class="btn btn-outline-primary active"
-                                    data-period="monthly">Monthly</button>
-                                <button type="button" class="btn btn-outline-primary" data-period="yearly">
-                                    Yearly
-                                    <span class="save-badge">Save 17%</span>
-                                </button>
+                    <!-- business column -->
+                    <div class="mobile-column business-column c-busin-m">
+                        <div class="row-wrapper column-decoration">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="popular-decoration">Most popular</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="features-list">
-                            <div class="feature-item">
-                                <img src="/placeholder.svg?height=40&width=40" alt="Email" class="feature-icon">
-                                <div class="feature-details">
-                                    <h4>Hosted Email on your own domains</h4>
-                                    <p>200GB storage per mailbox</p>
+                        <div class="row-wrapper row-header">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular"
+                                    data-column="c-busin-mobile">
+                                    <div class="content-wrapper">
+                                        <div class="badge badge-three-months">One month free</div>
+                                        <div class="plan-title">Business</div>
+                                        <div class="plan-description-wrapper">
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">Up to 500 users</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-storage.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">200GB email storage /user</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-folder.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">1TB file storage /user</div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-price-wrapper">
+                                            <div class="plan-price-highlight">3.50€</div>
+                                            <div class="plan-price">/user /mo</div>
+                                        </div>
+                                        <div class="plan-get-button">Get Business</div>
+                                        <p class="three-months-free-text">
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="feature-availability">
-                                    <i class="bi bi-check-circle-fill text-success"></i>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-webmail.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mMail">Hosted Email on your
+                                                    own
+                                                    domains</a>
+                                                <div class="column-feature-subtitle">200GB storage per mailbox</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-teamChat.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mTeamChat">TeamChat</a>
+                                                <div class="column-feature-subtitle">Chat in teams organized around
+                                                    projects
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-conference.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mConfe">Conferencing</a>
+                                                <div class="column-feature-subtitle">Hold meetups and webinars for up to
+                                                    1000 attendees</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-recording.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mRecord">Unlimited HD
+                                                    Recording</a>
+                                                <div class="column-feature-subtitle">Record and share your meetings in
+                                                    the
+                                                    cloud</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-ai.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mAI">ChatGPT Integration</a>
+                                                <div class="column-feature-subtitle">Powerful AI buddy for your office
+                                                    agenda. Works across Email, TeamChat and Documents.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-storage.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mStorage">Cloud storage</a>
+                                                <div class="column-feature-subtitle">Each user gets 1TB cloud storage
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mOffice">Office
+                                                    Documents</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-collab.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCollab">Collaborative
+                                                    editing</a>
+                                                <div class="column-feature-subtitle">Edit shared documents with
+                                                    colleagues
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-dashboard.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDash">Dashboard</a>
+                                                <div class="column-feature-subtitle">Your personalized workspace</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-calendar.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCalendar">Calendar</a>
+                                                <div class="column-feature-subtitle">Stay on top of your every day</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-exchange.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mExchange">Mobile sync</a>
+                                                <div class="column-feature-subtitle">Natively connect iOS and Android
+                                                    devices</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-notes.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mNotes">Notes</a>
+                                                <div class="column-feature-subtitle">Brand new notes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-antispam.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mSecurity">Security</a>
+                                                <div class="column-feature-subtitle">Antispam and antivirus</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile c-busin-optional">
+                                <span class="optional-text">
+                                    Optional
+                                </span>
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktop">Desktop Client</a>
+                                                <div class="column-feature-subtitle">Full IceWarp experience in
+                                                    a&nbsp;stand-alone desktop app.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktopOff">Desktop
+                                                    Office</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations in a desktop app</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-last">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular" data-column="c-busin">
+                                    <div class="plan-get-button">Get Business</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper column-decoration column-decoration-last">
+                            <div class="column-wrapper c-busin-mobile">
+                                <div class="column column-plan column-business column-popular"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-column qoute-column c-quote-m">
+                        <div class="row-wrapper row-header">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup" data-column="c-quote-mobile">
+                                    <div class="content-wrapper">
+                                        <div class="badge badge-three-months">One month free</div>
+                                        <div class="plan-title">Custom Quote</div>
+                                        <div class="plan-description-wrapper">
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">Starting from 500 users</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-company.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">Ideal for Business, Public, EDU, Corporates or
+                                                    Web
+                                                    hostings.</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-optional.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">All features are optional</div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-price-wrapper">
+                                            <div class="plan-price-highlight"></div>
+                                            <div class="plan-price">Custom price</div>
+                                        </div>
+                                        <div class="plan-get-button">Request a quote</div>
+                                        <p class="three-months-free-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-feature-wrapper">
+                                        <div class="column-feature-img">
+                                            <img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-webmail.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="column-feature-text-wrapper">
+                                            <a class="column-feature-title" data-modal="mMail">Hosted Email on your own
+                                                domains</a>
+                                            <div class="column-feature-subtitle">200GB storage per mailbox</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-feature-wrapper">
+                                        <div class="column-feature-img">
+                                            <img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-teamChat.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="column-feature-text-wrapper">
+                                            <a class="column-feature-title" data-modal="mTeamChat">TeamChat</a>
+                                            <div class="column-feature-subtitle">Chat in teams organized around projects
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-conference.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mConfe">Conferencing</a>
+                                                <div class="column-feature-subtitle">Hold meetups and webinars for up to
+                                                    1000 attendees</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-recording.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mRecord">Unlimited HD
+                                                    Recording</a>
+                                                <div class="column-feature-subtitle">Record and share your meetings in
+                                                    the
+                                                    cloud</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-ai.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mAI">ChatGPT Integration</a>
+                                                <div class="column-feature-subtitle">Powerful AI buddy for your office
+                                                    agenda. Works across Email, TeamChat and Documents.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-storage.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mStorage">Cloud storage</a>
+                                                <div class="column-feature-subtitle">Each user gets 1TB cloud storage
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mOffice">Office
+                                                    Documents</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-collab.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCollab">Collaborative
+                                                    editing</a>
+                                                <div class="column-feature-subtitle">Edit shared documents with
+                                                    colleagues
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-dashboard.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDash">Dashboard</a>
+                                                <div class="column-feature-subtitle">Your personalized workspace</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-calendar.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCalendar">Calendar</a>
+                                                <div class="column-feature-subtitle">Stay on top of your every day</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-exchange.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mExchange">Mobile sync</a>
+                                                <div class="column-feature-subtitle">Natively connect iOS and Android
+                                                    devices</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-notes.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mNotes">Notes</a>
+                                                <div class="column-feature-subtitle">Brand new notes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-antispam.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mSecurity">Security</a>
+                                                <div class="column-feature-subtitle">Antispam and antivirus</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktop">Desktop Client</a>
+                                                <div class="column-feature-subtitle">Full IceWarp experience in
+                                                    a&nbsp;stand-alone desktop app.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktopOff">Desktop
+                                                    Office</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations in a desktop app</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-last">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-quote" data-column="c-quote-mobile">
+                                    <div class="plan-get-button">Request a quote</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper column-decoration column-decoration-last">
+                            <div class="column-wrapper c-quote-mobile">
+                                <div class="column column-plan column-quote"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-column business-column s-licen-m" style="display: none">
+                        <div class="row-wrapper column-decoration">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="popular-decoration">Most popular</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-header">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular"
+                                    data-column="s-licen-mobile">
+                                    <div class="content-wrapper">
+                                        <div class="badge badge-three-months">One month free</div>
+                                        <div class="plan-title">Licence subscription</div>
+                                        <div class="plan-description-wrapper">
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">Up to 500 users</div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-price-wrapper">
+                                            <div class="plan-price-highlight">$3</div>
+                                            <div class="plan-price">/user /mo</div>
+                                        </div>
+                                        <div class="plan-get-button">Get Licence</div>
+                                        <p class="three-months-free-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-webmail.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mMail">Hosted Email on your
+                                                    own
+                                                    domains</a>
+                                                <div class="column-feature-subtitle">200GB storage per mailbox</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-teamChat.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mTeamChat">TeamChat</a>
+                                                <div class="column-feature-subtitle">Chat in teams organized around
+                                                    projects
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-conference.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mConfe">Conferencing</a>
+                                                <div class="column-feature-subtitle">Hold meetups and webinars for up to
+                                                    1000 attendees</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-recording.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mRecord">Unlimited HD
+                                                    Recording</a>
+                                                <div class="column-feature-subtitle">Record and share your meetings in
+                                                    the
+                                                    cloud</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-ai.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mAI">ChatGPT Integration</a>
+                                                <div class="column-feature-subtitle">Powerful AI buddy for your office
+                                                    agenda. Works across Email, TeamChat and Documents.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-storage.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mStorage">Cloud storage</a>
+                                                <div class="column-feature-subtitle">Each user gets 1TB cloud storage
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mOffice">Office
+                                                    Documents</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-collab.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCollab">Collaborative
+                                                    editing</a>
+                                                <div class="column-feature-subtitle">Edit shared documents with
+                                                    colleagues
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-dashboard.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDash">Dashboard</a>
+                                                <div class="column-feature-subtitle">Your personalized workspace</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-calendar.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCalendar">Calendar</a>
+                                                <div class="column-feature-subtitle">Stay on top of your every day</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-exchange.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mExchange">Mobile sync</a>
+                                                <div class="column-feature-subtitle">Natively connect iOS and Android
+                                                    devices</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-notes.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mNotes">Notes</a>
+                                                <div class="column-feature-subtitle">Brand new notes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-antispam.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mSecurity">Security</a>
+                                                <div class="column-feature-subtitle">Antispam and antivirus</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktop">Desktop Client</a>
+                                                <div class="column-feature-subtitle">Full IceWarp experience in
+                                                    a&nbsp;stand-alone desktop app.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktopOff">Desktop
+                                                    Office</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations in a desktop app</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-last">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular" data-column="c-busin">
+                                    <div class="plan-get-button">Licence subscription</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper column-decoration column-decoration-last">
+                            <div class="column-wrapper s-licen-mobile"
+                                style="width: 0px; border: 0px; opacity: 0; margin: 0px; padding: 0px; display: none;">
+                                <div class="column column-plan column-business column-popular"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-column qoute-column s-quote-m" style="display: none">
+                        <div class="row-wrapper row-header">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup" data-column="s-quote-mobile">
+                                    <div class="content-wrapper">
+                                        <div class="badge badge-three-months">One month free</div>
+                                        <div class="plan-title">Custom Quote</div>
+                                        <div class="plan-description-wrapper">
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-users.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">Starting from 500 users</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-company.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">Ideal for Business, Public, EDU, Corporates or
+                                                    Web
+                                                    hostings.</div>
+                                            </div>
+                                            <div class="plan-description">
+                                                <div class="plan-icon"><img class="plan-img"
+                                                        src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/icon-optional.svg"
+                                                        alt=""></div>
+                                                <div class="plan-text">All features are optional</div>
+                                            </div>
+                                        </div>
+                                        <div class="plan-price-wrapper">
+                                            <div class="plan-price-highlight"></div>
+                                            <div class="plan-price">Custom price</div>
+                                        </div>
+                                        <div class="plan-get-button">Request a quote</div>
+                                        <p class="three-months-free-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-feature-wrapper">
+                                        <div class="column-feature-img">
+                                            <img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-webmail.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="column-feature-text-wrapper">
+                                            <a class="column-feature-title" data-modal="mMail">Hosted Email on your own
+                                                domains</a>
+                                            <div class="column-feature-subtitle">200GB storage per mailbox</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-feature-wrapper">
+                                        <div class="column-feature-img">
+                                            <img class="plan-img"
+                                                src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-teamChat.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="column-feature-text-wrapper">
+                                            <a class="column-feature-title" data-modal="mTeamChat">TeamChat</a>
+                                            <div class="column-feature-subtitle">Chat in teams organized around projects
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-conference.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mConfe">Conferencing</a>
+                                                <div class="column-feature-subtitle">Hold meetups and webinars for up to
+                                                    1000 attendees</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-recording.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mRecord">Unlimited HD
+                                                    Recording</a>
+                                                <div class="column-feature-subtitle">Record and share your meetings in
+                                                    the
+                                                    cloud</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-ai.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mAI">ChatGPT Integration</a>
+                                                <div class="column-feature-subtitle">Powerful AI buddy for your office
+                                                    agenda. Works across Email, TeamChat and Documents.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-storage.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mStorage">Cloud storage</a>
+                                                <div class="column-feature-subtitle">Each user gets 1TB cloud storage
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mOffice">Office
+                                                    Documents</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-collab.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCollab">Collaborative
+                                                    editing</a>
+                                                <div class="column-feature-subtitle">Edit shared documents with
+                                                    colleagues
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-dashboard.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDash">Dashboard</a>
+                                                <div class="column-feature-subtitle">Your personalized workspace</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-calendar.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mCalendar">Calendar</a>
+                                                <div class="column-feature-subtitle">Stay on top of your every day</div>
+                                            </div>
+                                        </div>
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-exchange.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mExchange">Mobile sync</a>
+                                                <div class="column-feature-subtitle">Natively connect iOS and Android
+                                                    devices</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-notes.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mNotes">Notes</a>
+                                                <div class="column-feature-subtitle">Brand new notes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-antispam.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mSecurity">Security</a>
+                                                <div class="column-feature-subtitle">Antispam and antivirus</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktop">Desktop Client</a>
+                                                <div class="column-feature-subtitle">Full IceWarp experience in
+                                                    a&nbsp;stand-alone desktop app.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-data">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-startup">
+                                    <div class="column-description column">
+                                        <div class="column-feature-wrapper">
+                                            <div class="column-feature-img">
+                                                <img class="plan-img"
+                                                    src="https://wwwcdnv2.icewarp.com/img/redesign/pricing/redesign/feature-desktop-office.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="column-feature-text-wrapper">
+                                                <a class="column-feature-title" data-modal="mDesktopOff">Desktop
+                                                    Office</a>
+                                                <div class="column-feature-subtitle">Documents, Spreadsheets and
+                                                    Presentations in a desktop app</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper row-last">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-quote" data-column="s-quote-mobile">
+                                    <div class="plan-get-button">Request a quote</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper column-decoration column-decoration-last">
+                            <div class="column-wrapper s-quote-mobile">
+                                <div class="column column-plan column-quote"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- end of responsive layout -->
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/javascript/pricing-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript/navigation.js"></script>
 </body>
 
 </html>
