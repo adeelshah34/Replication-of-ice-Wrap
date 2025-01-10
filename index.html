@@ -63,8 +63,6 @@
         .text-wrapper div {
             height: 60px;
             /* Match container height */
-            line-height: 59px;
-            /* Vertically center text */
             white-space: nowrap;
             /* Prevent text wrapping */
         }
@@ -112,6 +110,7 @@
         }
 
 
+
         .description {
             color: #333;
             font-family: 'Roboto', sans-serif !important;
@@ -123,9 +122,11 @@
         }
 
         .deployment-options {
-            color: #333;
+            color: #7166F9;
+            text-decoration: none;
+            font-weight: 700;
             font-family: 'Roboto', sans-serif !important;
-            font-size: 1.25rem;
+            font-size: 18px !important;
             line-height: 1.6;
             letter-spacing: 0;
             text-align: center;
@@ -365,114 +366,7 @@
             }
         }
 
-        /* Add these styles to your styles.css file */
 
-        /* Dropdown Menu Styling */
-        .dropdown-menu {
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            margin-top: 0;
-            border: 1px solid #eaeaea;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            padding: 1rem;
-        }
-
-        /* Show dropdown when parent is hovered or has .show class */
-        .dropdown:hover .dropdown-menu,
-        .dropdown.show .dropdown-menu {
-            display: block;
-            opacity: 1;
-            visibility: visible;
-            margin-top: 0;
-        }
-
-        /* Product dropdown specific styling */
-        .dropdown-menu.product {
-            min-width: 600px;
-            padding: 2rem;
-        }
-
-        .dropdown-section {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .dropdown-left {
-            flex: 1;
-        }
-
-        .dropdown-right {
-            width: 200px;
-            border-left: 1px solid #eaeaea;
-            padding-left: 2rem;
-        }
-
-        .dropdown-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 0.75rem;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-        }
-
-        .dropdown-item img {
-            width: 32px;
-            height: 32px;
-        }
-
-        .dropdown-item h4 {
-            margin: 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2D3748;
-        }
-
-        .dropdown-item p {
-            margin: 0;
-            font-size: 0.8rem;
-            color: #718096;
-        }
-
-        .dropdown-right ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .dropdown-right ul li {
-            margin-bottom: 0.75rem;
-        }
-
-        .dropdown-right ul a {
-            color: #718096;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .dropdown-right ul a:hover {
-            color: var(--primary-purple);
-        }
-
-        /* Navbar dropdown arrow animation */
-        .nav-link .main-menu-dropdown-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .dropdown.show .nav-link .main-menu-dropdown-icon,
-        .nav-item:hover .main-menu-dropdown-icon {
-            transform: rotate(180deg);
-        }
-
-
-        .navbar-brand img {
-            width: 100px;
-            height: auto !important;
-        }
 
         /* Extend default container for footer */
         .footer-container {
@@ -560,17 +454,31 @@
         }
 
         .footer-heading {
-            font-size: 11px;
+            font-size: 14px;
             font-weight: 400;
             color: #333333;
+            font-family: Roboto, Noto Sans, sans-serif;
+            margin-bottom: 4px;
+        }
+
+        .footer-headings {
+            font-size: 12px;
+            font-weight: 400;
+            color: #333333;
+            font-family: Roboto, Noto Sans, sans-serif;
+            margin-bottom: 4px;
         }
 
         .footer-heading-para {
-            font-size: 11px;
+            font-size: 13px;
             font-weight: 400;
             color: #8F9BA3 !important;
             text-decoration: none;
-            margin-bottom: 7px;
+            margin-bottom: 4px;
+        }
+
+        .footer-heading-para:hover {
+            color: #c1171a !important;
         }
 
         .footer-text-decoration {
@@ -580,30 +488,155 @@
             font-weight: 400;
         }
 
+        .footer-text-decoration:hover {
+            color: #c1171a !important;
+        }
+
         .footer-social-icons {
             margin-left: 14px;
             text-decoration: none;
             padding: 14px 0;
+            gap: 20px;
+        }
+
+        /* Default visibility for all sections */
+        .footer-container .col-md-2,
+        .footer-container .col-md-5 {
+            display: block;
+        }
+
+        /* Hide Product and Pricing sections on mobile view */
+        @media (max-width: 768px) {
+
+            .footer-container .col-md-2,
+            /* Product Section */
+            .footer-container .col-md-5 {
+                /* Pricing Section */
+                display: none;
+            }
+
+            .footer-container {
+                padding: 20px;
+                /* Adjust padding for mobile */
+            }
+
+            .certification-badges {
+                justify-content: center;
+                /* Center badges on mobile */
+                padding-left: 0;
+                /* Remove extra padding */
+            }
+
+            .footer-bottom {
+                text-align: center;
+                /* Center-align footer text */
+            }
+
+            .footer-social {
+                justify-content: center;
+                /* Center-align social icons */
+                display: flex;
+                gap: 20px;
+            }
+
+            .subscribe-form input {
+                font-size: 10px;
+                /* Adjust input font size for smaller screens */
+            }
+
+            .subscribe-form button {
+                font-size: 10px;
+                /* Adjust button size for mobile */
+            }
+
+            .subscribe-form {
+                width: 215px;
+                justify-content: center;
+            }
+
+            .subscribe-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
+        <!-- <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid navbar-width">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp" class="img-fluid"
+                            style="max-width: 150px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link main-menu-link submenu-dropdown" role="button">
+                                    Product
+                                    <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
+                                        class="main-menu-dropdown-icon">
+                                </a>
+                                <div class="dropdown-menu main-menu-submenu product">
+                                    <div class="dropdown-section">
+                                        <div class="dropdown-left">
+                                            <a href="Product-page.html" class="dropdown-item">
+                                                <img src="assets/images/icon-product.svg" alt="Product Features">
+                                                <div>
+                                                    <h4>Product Features</h4>
+                                                    <p>IceWarp in the daily agenda</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <div class="dropdown-right">
+                                            <ul>
+                                                <li>
+                                                    <a href="comparison.html">
+                                                        <img src="assets/images/icon-comparison.svg" alt="">
+                                                        Comparison</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                        </ul>
+                        <div class="nav-buttons d-flex gap-2 align-items-center">
+                            <a href="#" class="btn-login">Login</a>
+                            <button class="btn btn-try-free">Try free for 1 month</button>
+                            <button class="btn btn-contact">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </nav> -->
+
+
+
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid navbar-width">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp" class="img-fluid"
+                        style="max-width: 150px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Desktop Navbar (visible on larger screens) -->
+                <div class="collapse navbar-collapse navbar-desktop" id="navbarContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link main-menu-link submenu-dropdown" href="/Product-page.html" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#mobileProductMenu" role="button"
+                                aria-expanded="false" aria-controls="mobileProductMenu">
                                 Product
                                 <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
                                     class="main-menu-dropdown-icon">
@@ -623,9 +656,10 @@
                                     <div class="dropdown-right">
                                         <ul>
                                             <li>
-                                                <a href="Product-page.html">
+                                                <a href="comparison.html">
                                                     <img src="assets/images/icon-comparison.svg" alt="">
-                                                    Comparison</a>
+                                                    Comparison
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -642,8 +676,50 @@
                         <button class="btn btn-contact">Contact us</button>
                     </div>
                 </div>
+
+                <!-- Mobile Navbar (visible on smaller screens) -->
+                <div class="navbar-mobile collapse navbar-collapse d-lg-none" id="navbarMobileContent">
+                    <ul class="navbar-nav me-auto">
+                        <!-- Mobile Accordion Dropdown -->
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#mobileProductMenu" role="button"
+                                aria-expanded="false" aria-controls="mobileProductMenu">
+                                Product
+                                <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
+                                    class="main-menu-dropdown-icon">
+                            </a>
+                            <div class="collapse" id="mobileProductMenu">
+                                <a href="Product-page.html" class="dropdown-item">
+                                    <img src="assets/images/icon-product.svg" alt="Product Features">
+                                    <div>
+                                        <h4>Product Features</h4>
+                                        <p>IceWarp in the daily agenda</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <ul>
+                                    <li>
+                                        <a href="comparison.html">
+                                            <img src="assets/images/icon-comparison.svg" alt="">
+                                            Comparison
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <div class="nav-buttons d-flex gap-2 align-items-center">
+                        <a href="#" class="btn-login">Login</a>
+                        <button class="btn btn-try-free">Try free for 1 month</button>
+                        <button class="btn btn-contact">Contact us</button>
+                    </div>
+                </div>
             </div>
         </nav>
+
     </header>
     <section class="fluid dc-section dc-section-home-top d-flex">
         <div class="dc-section-wrapper">
@@ -651,14 +727,15 @@
             <h2 class="subtitle">
                 <div class="text-wrapper" id="text-wrapper"></div>
             </h2>
-            <p class="description">
-                Hosted email, TeamChat, ChatGPT integration, Conferences,<br>
+            <p class="description ">
+                Hosted email, TeamChat, ChatGPT integration, Conferences,
                 Documents including real-time collaboration, and much more.
+
+                Choose between our <a href="#" class="deployment-options">cloud</a> and <a href="#"
+                    class="deployment-options">on-premises</a> deployment.
+
             </p>
-            <p class="deployment-options">
-                Choose between our <a href="#">cloud</a> and <a href="#">on-premises</a> deployment.
-            </p>
-            <button class="dc-button dc-preview-button" style="width: 100px; height: 55px;">View product</button>
+            <button class=" dc-button dc-preview-button" style="width: 100px; height: 55px;">View product</button>
         </div>
 
         <div class="hero-illustration hero-illustration-left">
@@ -726,6 +803,50 @@
         </div>
     </div>
 
+
+    <div class="container carousel-top carousel-top-mobile">
+        <!-- Mobile Carousel -->
+        <div class="carousel-container-mobile">
+            <!-- Carousel Slide -->
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/Mail-min.webp" alt="Email & AI">
+            </div>
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/TeamChat-min.webp" alt="TeamChat & AI">
+            </div>
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/Documents-min.webp" alt="Documents & AI">
+            </div>
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/Calendar-min.webp" alt="Calendar">
+            </div>
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/Confe-min.webp" alt="Conferences">
+            </div>
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/Notes-min_1.webp" alt="Notes">
+            </div>
+            <div class="carousel-slide-mobile">
+                <img src="assets/images/Dash-min.webp" alt="Dashboard">
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev-button-mobile">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="next-button-mobile">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <!-- Desktop Version -->
+    <div class="container carousel-top carousel-top-desktop">
+        <!-- Desktop carousel content here -->
+        <!-- You can add your desktop-specific carousel here -->
+    </div>
+
+
     <footer class="footer">
         <div class="footer-container">
             <div class="row justify-content-center">
@@ -733,8 +854,8 @@
                 <div class="col-md-2 col-sm-6 mb-4">
                     <h5 class="footer-heading">Product</h5>
                     <ul>
-                        <li><a class="footer-heading-para" href="#">Product page</a></li>
-                        <li><a class="footer-heading-para" href="#">Comparison</a></li>
+                        <li><a class="footer-heading-para" href="Product-page.html">Product page</a></li>
+                        <li><a class="footer-heading-para" href="comparison.html">Comparison</a></li>
                     </ul>
                 </div>
 
@@ -753,7 +874,7 @@
                 <div class="col-md-3 col-sm-6 mb-4">
 
                     <!-- Contact Info -->
-                    <div class="contact-info mb-4">
+                    <div class="contact-info mb-2">
                         <h5 class="footer-heading">Get in touch</h5>
                         <p class="footer-heading-para">+92 3041110365</p>
                         <p class="footer-heading-para">cloud.support@jazz.com.pk</p>
@@ -761,7 +882,7 @@
 
                     <!-- Subscribe Form -->
                     <div class="subscribe-section">
-                        <h5 class="footer-heading">Subscribe to the latest news</h5>
+                        <h5 class="footer-headings">Subscribe to the latest news</h5>
                         <form class="subscribe-form">
                             <input type="email" placeholder="cloud.support@jazz.com.pk">
                             <button type="submit" class="subscribe-btn">
@@ -795,14 +916,6 @@
                     alt="Certification 2">
                 <img src="https://icewarp.com/img/redesign/footer/ISO-27017.svg" style="width: 80px;"
                     alt="Certification 3">
-                <img src="https://icewarp.com/img/redesign/footer/ISO-27018.svg" style="width: 80px;"
-                    alt="Certification 4">
-                <img src="https://icewarp.com/img/redesign/footer/ISO-29119.png" style="width: 80px;"
-                    alt="Certification 5">
-                <img src="https://icewarp.com/img/redesign/footer/ISO-3402.png" style="width: 80px;"
-                    alt="Certification 6">
-                <img src="https://icewarp.com/img/redesign/footer/hipaa-2.svg" style="width: 80px;"
-                    alt="HIPAA Certification">
             </div>
 
             <!-- Footer Bottom -->
@@ -827,30 +940,28 @@
         </div>
     </footer>
 
+    <!-- Bootstrap 5.3.2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom navigation.js (make sure it comes after Bootstrap JS) -->
     <script src="assets/javascript/navigation.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const phrases = [
                 'Get more features for Less.',
                 'All components in a single window.',
                 'All in a single package.',
-                'Boost your Productivity',
+                'Boost your Productivity.',
             ];
 
             const textWrapper = document.getElementById('text-wrapper');
 
             if (textWrapper) {
-                // Populate the text-wrapper with phrases
+                // Populate the text-wrapper with all phrases in separate divs
                 textWrapper.innerHTML = phrases
                     .map(phrase => `<div>${phrase}</div>`)
                     .join("");
-            } else {
-                console.error("Element with ID 'text-wrapper' not found in the DOM.");
             }
         });
 
@@ -858,53 +969,35 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Handle dropdown toggle on click
-            document.querySelectorAll('.dropdown-toggle').forEach(item => {
+            document.querySelectorAll('.nav-item.dropdown .nav-link').forEach(item => {
                 item.addEventListener('click', function (e) {
                     e.preventDefault();
+
                     const dropdown = this.closest('.dropdown');
 
-                    // Toggle 'show' class on the dropdown
+                    // Toggle 'show' class for the clicked dropdown
                     dropdown.classList.toggle('show');
 
-                    // Toggle 'show' class on the dropdown menu
-                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-                    if (dropdownMenu) {
-                        dropdownMenu.classList.toggle('show');
-                    }
-
-                    // Close other open dropdowns (optional)
-                    document.querySelectorAll('.dropdown.show').forEach(openDropdown => {
+                    // Close other dropdowns
+                    document.querySelectorAll('.nav-item.dropdown.show').forEach(openDropdown => {
                         if (openDropdown !== dropdown) {
                             openDropdown.classList.remove('show');
-                            openDropdown.querySelector('.dropdown-menu').classList.remove('show');
                         }
                     });
                 });
             });
 
-            // Handle dropdown hover for larger screens
-            if (window.innerWidth >= 992) {
-                const dropdowns = document.querySelectorAll('.dropdown');
-
-                dropdowns.forEach(dropdown => {
-                    dropdown.addEventListener('mouseenter', function () {
-                        this.classList.add('show');
-                        const dropdownMenu = this.querySelector('.dropdown-menu');
-                        if (dropdownMenu) {
-                            dropdownMenu.classList.add('show');
-                        }
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                // Check if the click is outside of any open dropdown
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.nav-item.dropdown.show').forEach(openDropdown => {
+                        openDropdown.classList.remove('show');
                     });
-
-                    dropdown.addEventListener('mouseleave', function () {
-                        this.classList.remove('show');
-                        const dropdownMenu = this.querySelector('.dropdown-menu');
-                        if (dropdownMenu) {
-                            dropdownMenu.classList.remove('show');
-                        }
-                    });
-                });
-            }
+                }
+            });
         });
+
 
     </script>
     <script>
@@ -920,6 +1013,149 @@
             });
         });
     </script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Detect if it's a mobile or desktop view
+            const isMobileView = window.matchMedia("(max-width: 768px)").matches;
+
+            if (isMobileView) {
+                // Hide the desktop carousel on mobile
+                document.querySelector(".carousel-top").style.display = "none";
+
+                // Show the mobile-specific carousel (if you have one)
+                document.querySelector(".carousel-top-mobile").style.display = "block";
+            } else {
+                // Hide the mobile carousel on desktop
+                document.querySelector(".carousel-top-mobile").style.display = "none";
+
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const containerMobile = document.querySelector(".carousel-container-mobile");
+            const slidesMobile = document.querySelectorAll(".carousel-slide-mobile");
+            const prevButtonMobile = document.querySelector(".prev-button-mobile");
+            const nextButtonMobile = document.querySelector(".next-button-mobile");
+
+            let currentIndexMobile = 1; // Start at the first "real" slide (after duplicate)
+            const totalSlides = slidesMobile.length;
+
+            // Clone the first and last slides
+            const firstClone = slidesMobile[0].cloneNode(true);
+            const lastClone = slidesMobile[totalSlides - 1].cloneNode(true);
+
+            // Append clones to container
+            containerMobile.appendChild(firstClone);
+            containerMobile.insertBefore(lastClone, slidesMobile[0]);
+
+            const totalWithClones = totalSlides + 2; // Total slides including clones
+
+            // Update slide positions
+            function updateSlideMobile() {
+                containerMobile.style.transform = `translateX(-${currentIndexMobile * 100}%)`;
+                containerMobile.style.transition = "transform 0.3s ease-in-out";
+            }
+
+            // Reset carousel position when at clones
+            containerMobile.addEventListener("transitionend", () => {
+                if (currentIndexMobile === 0) {
+                    currentIndexMobile = totalSlides; // Jump to the last real slide
+                    containerMobile.style.transition = "none";
+                    containerMobile.style.transform = `translateX(-${currentIndexMobile * 100}%)`;
+                } else if (currentIndexMobile === totalSlides + 1) {
+                    currentIndexMobile = 1; // Jump to the first real slide
+                    containerMobile.style.transition = "none";
+                    containerMobile.style.transform = `translateX(-${currentIndexMobile * 100}%)`;
+                }
+            });
+
+            nextButtonMobile.addEventListener("click", () => {
+                if (currentIndexMobile <= totalSlides) {
+                    currentIndexMobile++;
+                    updateSlideMobile();
+                }
+            });
+
+            prevButtonMobile.addEventListener("click", () => {
+                if (currentIndexMobile >= 0) {
+                    currentIndexMobile--;
+                    updateSlideMobile();
+                }
+            });
+
+            // Initialize the position
+            containerMobile.style.transform = `translateX(-${currentIndexMobile * 100}%)`;
+        });
+
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarMobileContent = document.getElementById('navbarMobileContent');
+            const productLinks = document.querySelectorAll('.navbar-mobile .nav-link[data-bs-toggle="collapse"]');
+
+            // Handle mobile dropdown toggle (Product menu)
+            productLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevent click from propagating to the navbar-toggler
+                    const targetId = this.getAttribute('href').substring(1); // Get target collapse ID
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const isOpen = targetElement.classList.contains('show');
+                        if (isOpen) {
+                            // If dropdown is open, hide it
+                            bootstrap.Collapse.getInstance(targetElement).hide();
+                        } else {
+                            // If dropdown is closed, show it
+                            bootstrap.Collapse.getOrCreateInstance(targetElement).show();
+                        }
+                    }
+                });
+            });
+
+            // Handle navbar-toggler behavior (toggle navbar)
+            navbarToggler.addEventListener('click', function (event) {
+                event.stopPropagation(); // Prevent event from propagating to the dropdown
+                // Toggle the navbar visibility
+                const isNavbarOpen = navbarMobileContent.classList.contains('show');
+                if (isNavbarOpen) {
+                    // If navbar is open, hide it
+                    bootstrap.Collapse.getInstance(navbarMobileContent).hide();
+                } else {
+                    // If navbar is closed, show it
+                    bootstrap.Collapse.getOrCreateInstance(navbarMobileContent).show();
+                }
+
+                // Close the dropdown when toggling the navbar
+                const openDropdown = document.querySelector('.navbar-mobile .collapse.show');
+                if (openDropdown) {
+                    bootstrap.Collapse.getInstance(openDropdown).hide();
+                }
+            });
+
+            // Close the navbar and dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideNavbar = navbarMobileContent.contains(event.target) || navbarToggler.contains(event.target);
+                const openDropdown = document.querySelector('.navbar-mobile .collapse.show');
+                const isClickInsideDropdown = openDropdown && openDropdown.contains(event.target);
+                // Close the dropdown if clicked outside
+                if (!isClickInsideDropdown && openDropdown) {
+                    bootstrap.Collapse.getInstance(openDropdown).hide();
+                }
+                // Close the navbar if clicked outside
+                if (!isClickInsideNavbar && navbarMobileContent.classList.contains('show')) {
+                    bootstrap.Collapse.getInstance(navbarMobileContent).hide();
+                }
+            });
+        });
+
+
+    </script>
+
 </body>
 
 </html>

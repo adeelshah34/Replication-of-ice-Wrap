@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const pos = parseInt(slide.getAttribute("data-pos"), 10);
             const diff = (pos - currentIndex + slides.length) % slides.length;
 
-            console.log(`Slide: ${pos}, Diff: ${diff}`);
+            // console.log(`Slide: ${pos}, Diff: ${diff}`);
 
             if (diff === 0) {
                 // Center active slide

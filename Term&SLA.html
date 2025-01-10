@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Level Agreement (SLA)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="redesigned.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/product-page.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            font-weight: 700 !important;
+            font: inherit;
+            color: #333;
+        }
+
+        .content {
+            margin-bottom: 30px;
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-top: 20px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+            line-height: 1.7rem !important;
+        }
+
+        .in {
+            width: 100%;
+            max-width: 960px;
+            padding: 15px 0;
+        }
+
+        .li {
+            line-height: 1.8rem !important;
+        }
+
+        .p {
+            margin: 0 0 30px;
+            font-size: 100%;
+            line-height: 1.714rem !important;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 400;
+            margin-bottom: 14px;
+            font-family: inherit;
+        }
+
+        /* Extend default container for footer */
+        .footer-container {
+            max-width: 1200px;
+            /* Adjust width if needed */
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer Styles */
+        .footer {
+            padding: 60px 0 20px;
+            background-color: #fff;
+        }
+
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li a:hover {
+            color: #6c5ce7;
+        }
+
+        .subscribe-form {
+            display: flex;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            padding: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 11px;
+            text-indent: 0.75rem;
+            width: 20%;
+        }
+
+        .subscribe-btn {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+        }
+
+        .certification-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-left: 94px;
+            margin-bottom: 5px;
+        }
+
+        .certification-badges img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .container-footer {
+            width: 100%;
+            position: relative;
+            max-width: 1140px;
+        }
+
+        .footer-heading {
+            font-size: 11px;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        .footer-heading-para {
+            font-size: 11px;
+            font-weight: 400;
+            color: #8F9BA3 !important;
+            text-decoration: none;
+            margin-bottom: 7px;
+        }
+
+        .footer-text-decoration {
+            text-decoration: none;
+            color: #8f9ba3 !important;
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        .footer-text-decoration:hover {
+            color: #c1171a !important;
+        }
+
+        .footer-social-icons {
+            margin-left: 14px;
+            text-decoration: none;
+            padding: 14px 0;
+        }
+
+        .mb-6 {
+            margin-bottom: 3.5rem !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid navbar-width">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/Garaj 24-7 final Logo-F-01.svg" alt="IceWarp">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link main-menu-link submenu-dropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                            <img src="assets/images/drop-option.svg" alt="Dropdown Icon"
+                                class="main-menu-dropdown-icon">
+                        </a>
+                        <div class="dropdown-menu main-menu-submenu product">
+                            <div class="dropdown-section">
+                                <div class="dropdown-left">
+                                    <a href="Product-page.html" class="dropdown-item">
+                                        <img src="assets/images/icon-product.svg" alt="Product Features">
+                                        <div>
+                                            <h4>Product Features</h4>
+                                            <p>Garaj 24/7 in the daily agenda</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="dropdown-right">
+                                    <ul>
+                                        <li><a href="comparison.html">
+                                                <img src="assets/images/icon-comparison.svg" alt="">
+                                                Comparison</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <div class="nav-buttons d-flex gap-2 align-items-center">
+                    <a href="#" class="btn-login">Login</a>
+                    <button class="btn btn-try-free">Try free for 1 month</button>
+                    <button class="btn btn-contact">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container in">
+        <h1 class="mb-6">
+            <p>
+                Service Level Agreement
+            </p>
+        </h1>
+
+
+        <div class="content">
+            <h2 class="section-title">Agreement Overview</h2>
+            <p>This Service Level Agreement (“SLA”) outlines the service commitments, availability goals, and
+                performance expectations between PMCL (“PMCL” or “Service Provider”) and its valued customer
+                (“Customer”) with respect to the use of Garaj 24/7 productivity suite services (“Services”).</p>
+            <p>The Customer’s use of Garaj 24/7 Services is governed by this SLA, the Terms of Service (“TOS”),
+                Privacy
+                Policy, Acceptable Use Policy, and other documents referenced herein (collectively, the
+                “Agreement”).
+                This SLA establishes the Customer's responsibilities regarding the Services and outlines the
+                remedies
+                available in the event that Garaj 24/7 fails to meet these service commitments.</p>
+
+            <h2 class="section-title">Definitions</h2>
+            <ul>
+                <li><strong>Agreement:</strong> Refers to this SLA, along with all associated documents that govern
+                    the
+                    use of Garaj 24/7 Services.</li>
+                <li><strong>Business Hours:</strong> 9:00 a.m. to 6:00 p.m. (Pakistan Standard Time - PST), Monday
+                    through Friday, excluding scheduled Service Maintenance.</li>
+                <li><strong>Service Maintenance:</strong> Refers to maintenance of the Garaj 24/7 Services,
+                    including
+                    software and hardware upgrades, database optimization, and network maintenance.</li>
+            </ul>
+
+            <h2 class="section-title">Customer Data Protection</h2>
+            <p>The Customer acknowledges that they are solely responsible for maintaining the security of their
+                login
+                credentials used to access the Customer Data. PMCL’s security obligations are limited to the scope
+                as
+                subscribed on the website or Self Service Portal. The Customer is responsible for designating
+                authorized
+                users under their account and limiting access of login credentials.</p>
+
+            <h2 class="section-title">Billing</h2>
+            <p>PMCL may bill the Customer for:</p>
+            <ul>
+                <li>Recurring or fixed charges in advance;</li>
+                <li>Variable charges, in arrears, including license usage charges and managed services;</li>
+                <li>Installation or set-up charges;</li>
+                <li>Any equipment (e.g., servers) the Customer purchases from PMCL, on or after delivery as part of
+                    the
+                    solution.</li>
+            </ul>
+            <p>Bills may include charges from previous billing periods where these have not been remitted.</p>
+            <p><strong>Early Termination Charges:</strong> If a service subject to a committed term is terminated
+                prior
+                to expiry of the committed term by the Customer (or by PMCL due to Customer's breach of the
+                Agreement),
+                PMCL shall be entitled to charge early termination charges, including the difference between the
+                yearly
+                and monthly payment and charges for each month of service rendered during the committed term.</p>
+
+            <h2 class="section-title">Service Activation Process</h2>
+            <ol>
+                <li>The Customer agrees to the proposal submitted by PMCL and issues a Purchase Order (PO) to PMCL’s
+                    authorized representative.</li>
+                <li>After issuance of the PO, the Customer will e-sign the Order Form sent via a system-generated
+                    email
+                    or approved on the Self Service Portal.</li>
+                <li>Upon acceptance of the Order Form, PMCL will deliver the service as per the timelines stipulated
+                    in
+                    the Order Form.</li>
+                <li>After service delivery, the Customer will be invoiced as per the agreed timelines in the Order
+                    Form.
+                </li>
+            </ol>
+
+            <h2 class="section-title">Service Availability</h2>
+            <p><strong>Service Availability Level:</strong> PMCL commits to achieving a service uptime of 99.5%,
+                excluding scheduled maintenance. The Customer acknowledges that the Internet is a global network
+                outside
+                the control of PMCL, and factors beyond PMCL's control may impact service availability.</p>
+
+            <h2 class="section-title">Limitations</h2>
+            <p>The commitments outlined in this SLA do not apply to performance or availability issues arising from:
+            </p>
+            <ul>
+                <li><strong>Force Majeure Events:</strong> Natural disasters, war, terrorism, riots, government
+                    actions,
+                    or external network/device failures.</li>
+                <li><strong>Third-Party Services or Equipment:</strong> Issues caused by non-Garaj 24/7 services,
+                    hardware, or software, including inadequate bandwidth or third-party dependencies.</li>
+                <li><strong>Single Data Center Dependency:</strong> Failures in a single data center explicitly
+                    relied
+                    upon by the Customer without geo-resilient configurations.</li>
+                <li><strong>Advised Modifications:</strong> Issues resulting from the Customer’s failure to modify
+                    service use as advised by Garaj 24/7.</li>
+                <li><strong>Previews and Trials:</strong> Downtime related to beta, trial, or pre-release versions
+                    of
+                    services, features, or software.</li>
+                <li><strong>Unauthorized or Inappropriate Use:</strong> Actions or inactions by the Customer,
+                    including
+                    security breaches caused by misuse of passwords or equipment.</li>
+                <li><strong>Non-Adherence to Guidelines:</strong> Issues arising from the failure to follow required
+                    configurations, supported platforms, or acceptable use policies.</li>
+                <li><strong>Faulty Inputs:</strong> Errors due to incorrect input, arguments, or commands from the
+                    Customer (e.g., attempts to access non-existent files).</li>
+                <li><strong>Quota Exceedance:</strong> Service degradation or downtime caused by exceeding
+                    prescribed
+                    quotas or throttling due to abusive behavior.</li>
+                <li><strong>Outside Support Windows:</strong> Use of service features outside of defined support
+                    windows.</li>
+                <li><strong>Unpaid Licenses:</strong> Incidents related to licenses reserved but not paid for at the
+                    time of the issue.</li>
+                <li><strong>Customer-Initiated Actions:</strong> Downtime caused by Customer-initiated operations
+                    such
+                    as restarts, stop/start commands, failovers, or scaling actions.</li>
+                <li><strong>Scheduled Maintenance:</strong> Downtime incurred during monthly maintenance windows for
+                    patching servers or infrastructure.</li>
+                <li><strong>Performance Degradation:</strong> Latency or performance issues without actual service
+                    unavailability unless explicitly defined in the applicable Service Level.</li>
+                <li><strong>Third-Party Dependencies:</strong> Inability to read/write in services like SharePoint
+                    Online due to third-party failures not controlled by PMCL.</li>
+            </ul>
+
+            <h2 class="section-title">Email Service Exclusions</h2>
+            <ul>
+                <li><strong>Denial of Service (DoS) Attacks:</strong> Service interruptions caused by malicious
+                    traffic.
+                </li>
+                <li><strong>Customer Misconfiguration:</strong> Downtime due to misconfigured tenant settings.</li>
+                <li><strong>External Network Issues:</strong> Network outages or delays outside PMCL boundary.</li>
+                <li><strong>Quota Exceedance:</strong> Issues resulting from exceeding email send/receive limits.
+                </li>
+                <li><strong>Custom Extensions:</strong> Problems caused by tenant custom policies, apps, or other
+                    extensions.</li>
+                <li><strong>Third-Party Incidents:</strong> Disruptions caused by external entities, such as ISPs or
+                    on-premises systems.</li>
+            </ul>
+
+            <h2 class="section-title">Scheduled Maintenance</h2>
+            <p>Scheduled maintenance is performed to ensure the reliability, security, and performance of services.
+                Notifications will be provided at least 48 hours before maintenance activities.</p>
+            <ul>
+                <li><strong>Notification:</strong> Customers will be provided with at least 48 hours' prior notice
+                    for
+                    any scheduled maintenance activities. Notifications will include the maintenance schedule,
+                    expected
+                    duration, and any anticipated service impact.</li>
+                <li><strong>Timing:</strong> Scheduled maintenance is typically performed during off-peak hours to
+                    minimize disruption to services.</li>
+                <li><strong>Impact Minimization:</strong> PMCL will make every effort to minimize downtime and
+                    service
+                    interruptions during scheduled maintenance windows.</li>
+                <li><strong>Emergency Maintenance:</strong> In cases where urgent updates or fixes are required to
+                    maintain service security or prevent system failures, PMCL reserves the right to perform
+                    emergency
+                    maintenance. Notifications for emergency maintenance will be provided as early as practicable.
+                </li>
+            </ul>
+
+            <h2 class="section-title">Severity Levels</h2>
+            <h4>Cloud Customers</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Severity Level</th>
+                        <th>Description</th>
+                        <th>Response Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Level 1 - Emergency</td>
+                        <td>Complete shutdown or major obstacle for key users.</td>
+                        <td>Within 30 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Level 2 - High</td>
+                        <td>Critical loss of functionality affecting many users.</td>
+                        <td>Within 1 hour</td>
+                    </tr>
+                    <tr>
+                        <td>Level 3 - Medium</td>
+                        <td>Moderate deficiencies but not requiring immediate action.</td>
+                        <td>Within 2 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Level 4 - Low</td>
+                        <td>Minor deficiencies not requiring immediate action.</td>
+                        <td>Within 4 hours</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>On-Prem Customers SLA</h4>
+
+            <div class="content">
+                <h2 class="section-title">SLA Paid Support</h2>
+                <p>For on-premises deployments, the response times outlined below apply exclusively to customers
+                    with active paid
+                    support service.</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Severity Levels</th>
+                            <th>Description</th>
+                            <th>Response Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 1 - Emergency</td>
+                            <td>It causes a complete shutdown of the service or a major obstacle for a key part of
+                                the users.</td>
+                            <td>Within 30 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Level 2 - High</td>
+                            <td>It causes a critical loss of application functionality or performance, resulting in
+                                many users'
+                                inability to perform their normal functions.</td>
+                            <td>Within 1-hour.</td>
+                        </tr>
+                        <tr>
+                            <td>Level 3 - Medium</td>
+                            <td>It causes moderate deficiencies in the service provision but does not disrupt the
+                                entire process in
+                                such a way that immediate action is required.</td>
+                            <td>Within 2 hours</td>
+                        </tr>
+                        <tr>
+                            <td>Level 4 - Low</td>
+                            <td>It causes minor deficiencies in the service provision but does not disrupt the
+                                entire process in
+                                such a way that immediate action is required; it comprises minor incidents or
+                                incorrect service
+                                behaviour.</td>
+                            <td>Within 4-hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="section-title">Termination</h2>
+                <p>Either of the Parties can terminate its obligations under this Agreement by providing the other
+                    Party a thirty
+                    (30) days advance written notice, whereby the Agreement will thereupon be terminated without
+                    prejudice to any
+                    other remedy or right. In case of early termination, the customer is liable to pay the remaining
+                    amount of the
+                    subscription.</p>
+                <p>Upon the Customer providing notice of termination for the respective Service, all Charges,
+                    including any unbilled
+                    amounts, shall become immediately payable. Customer shall be billed for all Charges up to and
+                    including the last
+                    day of the notice period (i.e., the date on which the respective Service is terminated).</p>
+
+                <h2 class="section-title">Service Termination by PMCL</h2>
+                <p>Without limiting the generality of any other clause in the Master Agreement or this Service
+                    Agreement Form, PMCL
+                    may terminate Customer’s Service immediately by notice in writing if:</p>
+                <ul>
+                    <li>The Customer has provided PMCL with false or misleading information or the Customer has not
+                        provided PMCL
+                        with any information that we have reasonably requested for the purposes of this Contract.
+                    </li>
+                    <li>The Customer’s nominated payment method is refused or dishonored, or the Customer fails to
+                        pay the amount
+                        specified within fourteen (14) days of the due date.</li>
+                    <li>The Customer is unlawfully using the Service.</li>
+                    <li>The Customer has breached any provision of the Contract.</li>
+                    <li>It is required under any regulatory or emergency scenario.</li>
+                    <li>The operations, security, or efficiency of a Service is impaired by Customer’s use of
+                        Service or Customer
+                        Equipment connected to the Service.</li>
+                </ul>
+
+                <h2 class="section-title">Jurisdiction and Arbitration</h2>
+                <p>This Agreement along with Annexes shall be governed by and construed in accordance with the Laws
+                    of the Islamic
+                    Republic of Pakistan.</p>
+                <p>If a dispute arises between the Parties, then all such dispute(s) shall be settled through
+                    arbitration by a sole
+                    arbitrator to be appointed with mutual consent of the Parties. The arbitration shall be held
+                    under the
+                    provisions of the Arbitration Act, 1940 as amended. The arbitration shall be held in Islamabad
+                    in the English
+                    language. The award of the arbitration shall be binding on the Parties. The Parties shall bear
+                    the cost of the
+                    appointed arbitrator equally.</p>
+
+                <h2 class="section-title">Responsibility Matrix</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>PMCL</th>
+                            <th>Customer</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Service Activation</td>
+                            <td>Responsible & Accountable</td>
+                            <td>Consult</td>
+                            <td>Details to be provided by customer for activation and accepting link to become
+                                partner</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Responsible & Accountable</td>
+                            <td>Inform</td>
+                            <td>As per SLA</td>
+                        </tr>
+                        <tr>
+                            <td>Billing & Invoicing</td>
+                            <td>Accountable</td>
+                            <td>Informed</td>
+                            <td>PMCL will share the timely invoices</td>
+                        </tr>
+                        <tr>
+                            <td>Payment</td>
+                            <td>Responsible</td>
+                            <td>Accountable</td>
+                            <td>Customer is responsible for timely payment processing</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="section-title">Escalation Matrix</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 1</td>
+                            <td>
+                                <strong>Self Service Portal</strong><br>
+                                <a href="mailto:cloud.support@jazz.com.pk">cloud.support@jazz.com.pk</a><br>
+                                <a href="tel:+923041110365">+92 304 111 0365</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Level 2</td>
+                            <td>Assigned Account Manager from technical team</td>
+                        </tr>
+                        <tr>
+                            <td>Level 3</td>
+                            <td>
+                                <strong>Yasim Zaman Kiani<br>Manager Platform & Innovation</strong>
+                                <a href="tel:+923071505041">+92 307 1505041</a><br>
+                                <a href="mailto:Yasim.kiani@jazz.com.pk">Yasim.kiani@jazz.com.pk</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row justify-content-center">
+                <!-- Product Column -->
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h5 class="footer-heading">Product</h5>
+                    <ul>
+                        <li><a class="footer-heading-para" href="Product-page.html">Product page</a></li>
+                        <li><a class="footer-heading-para" href="comparison.html">Comparison</a></li>
+                    </ul>
+                </div>
+
+                <!-- Pricing Column -->
+                <div class="col-md-5 col-sm-6 mb-4">
+                    <h5 class="footer-heading">Pricing</h5>
+                    <ul>
+                        <li><a class="footer-heading-para" href="#">Email Only</a></li>
+                        <li><a class="footer-heading-para" href="#">Startups</a></li>
+                        <li><a class="footer-heading-para" href="#">Business</a></li>
+                        <li><a class="footer-heading-para" href="#">Business Plus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div class="col-md-3 col-sm-6 mb-4">
+
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-4">
+                        <h5 class="footer-heading">Get in touch</h5>
+                        <p class="footer-heading-para">+92 3041110365</p>
+                        <p class="footer-heading-para">cloud.support@jazz.com.pk</p>
+                    </div>
+
+                    <!-- Subscribe Form -->
+                    <div class="subscribe-section">
+                        <h5 class="footer-heading">Subscribe to the latest news</h5>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="cloud.support@jazz.com.pk">
+                            <button type="submit" class="subscribe-btn">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="footer-social">
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/fb.svg" alt="">
+                        </a>
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/ig.svg" alt="">
+                        </a>
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/yt.svg" alt="">
+                        </a>
+                        <a class="footer-social-icons" href="#" target="_blank">
+                            <img src="assets/images/li.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification Badges -->
+            <div class="certification-badges">
+                <img src="https://icewarp.com/img/redesign/footer/qes_2017_stamp_iso_9001_en_gr_poz.png"
+                    alt="Certification 1">
+                <img src="https://icewarp.com/img/redesign/footer/qes_2017_stamp_iso_27001_en_gr_poz.png"
+                    alt="Certification 2">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-27017.svg" style="width: 80px;"
+                    alt="Certification 3">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-27018.svg" style="width: 80px;"
+                    alt="Certification 4">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-29119.png" style="width: 80px;"
+                    alt="Certification 5">
+                <img src="https://icewarp.com/img/redesign/footer/ISO-3402.png" style="width: 80px;"
+                    alt="Certification 6">
+                <img src="https://icewarp.com/img/redesign/footer/hipaa-2.svg" style="width: 80px;"
+                    alt="HIPAA Certification">
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex  gap-4">
+                            <p class="footer-text-decoration">
+                                <!-- © Copyright 1999 - 2024. IceWarp Ltd. and IceWarp Inc. All rights reserved. -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 footer-right">
+                        <div class="d-flex justify-content-center gap-4">
+                            <a class="footer-text-decoration" href="#">Privacy Policy</a>
+                            <a class="footer-text-decoration" href="#">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/javascript/navigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle dropdown toggle on click
+            document.querySelectorAll('.nav-item.dropdown .nav-link').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const dropdown = this.closest('.dropdown');
+
+                    // Toggle 'show' class for the clicked dropdown
+                    dropdown.classList.toggle('show');
+
+                    // Close other dropdowns
+                    document.querySelectorAll('.nav-item.dropdown.show').forEach(openDropdown => {
+                        if (openDropdown !== dropdown) {
+                            openDropdown.classList.remove('show');
+                        }
+                    });
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (e) {
+                // Check if the click is outside of any open dropdown
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.nav-item.dropdown.show').forEach(openDropdown => {
+                        openDropdown.classList.remove('show');
+                    });
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
